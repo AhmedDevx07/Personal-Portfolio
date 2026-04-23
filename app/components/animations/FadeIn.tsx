@@ -9,11 +9,11 @@ interface FadeInProps {
   threshold?: number;
 }
 
-const FadeIn: React.FC<FadeInProps> = ({ 
-  children, 
-  delay = 0, 
-  duration = 500, 
-  threshold = 0.1 
+const FadeIn: React.FC<FadeInProps> = ({
+  children,
+  delay = 0,
+  duration = 500,
+  threshold = 0.1,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ const FadeIn: React.FC<FadeInProps> = ({
       className={isVisible ? "animate-fadeIn" : "opacity-0"}
       style={{
         animationDelay: isVisible ? `${delay}ms` : "0ms",
-        animationDuration: `${duration}ms`, // Pehle yahan 'animationDirection' tha ghalti se, maine theek kar diya
+        animationDuration: `${duration}ms`,
         animationFillMode: "both",
       }}
     >
