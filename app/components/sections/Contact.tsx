@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
               Let's build something{" "}
-              <span className="text-primary italic">great.</span>
+              <span className="text-primary italic">great together.</span>
             </h2>
           </div>
         </FadeIn>
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300"
-                      placeholder="Name"
+                      placeholder="What's your name?"
                     />
                   </div>
                   <div className="space-y-2">
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300"
-                      placeholder="123@example.com"
+                      placeholder="Enter your email address"
                     />
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     rows={4}
                     className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300 resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your project or just say hi..."
                   />
                 </div>
 
@@ -138,7 +138,6 @@ const Contact: React.FC = () => {
                   className="w-full group relative flex items-center justify-center gap-3 px-8 py-5 bg-primary text-black font-bold rounded-2xl hover:bg-white transition-all duration-500 overflow-hidden"
                 >
                   <span className="relative z-10">Send Message</span>
-                   
                 </button>
 
                 {status.message && (
@@ -160,8 +159,10 @@ const Contact: React.FC = () => {
                   Available for new opportunities
                 </h3>
                 <p className="text-white/50 font-light leading-relaxed max-w-md">
-                  Karachi base hoon magar globally kaam karta hoon. Agar koi
-                  idea hai toh discuss karte hain!
+                  Based in Karachi, Pakistan, but working with clients globally.
+                  Whether you have a specific project in mind or just want to
+                  bridge the gap between an idea and a digital reality—let's
+                  connect and make it happen.
                 </p>
 
                 <div className="space-y-4">

@@ -7,7 +7,6 @@ import ProjectCard from "../Ui/ProjectCard";
 import FadeIn from "../animations/FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
 
- 
 const categoryIcons: Record<string, React.ElementType> = {
   All: Target,
   Frontend: Layers,
@@ -47,8 +46,9 @@ const Projects: React.FC = () => {
               Featured <span className="text-primary italic">Projects</span>
             </h2>
             <p className="text-lg text-white/50 max-w-2xl mx-auto font-light">
-              A collection of high-performance web applications and digital
-              experiences built with precision.
+              A curated showcase of high-performance web applications, digital
+              products, and experimental prototypes built with a focus on
+              scalability and user experience.
             </p>
           </div>
         </FadeIn>

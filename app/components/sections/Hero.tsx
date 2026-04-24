@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           {/* left column */}
           <div className="text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/10 rounded-full mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/10 rounded-full mb-6">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 <span className="text-[10px] font-bold text-primary/80 uppercase tracking-[2px]">
                   {PERSONAL_INFO.title} | Based in {PERSONAL_INFO.location}
@@ -44,41 +44,42 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={100}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter mb-6">
-                Creating <span className="text-primary italic">Scalable</span>{" "}
+                Crafting <span className="text-primary italic">Scalable</span>{" "}
                 <br />
                 Web Solutions.
               </h1>
             </FadeIn>
 
             <FadeIn delay={200}>
-              <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-10 leading-relaxed">
-                Building modern, scalable web applications with React,
-                JavaScript, and cutting-edge technologies. Transforming ideas
-                into exceptional digital experiences.
+              <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-6 leading-relaxed">
+                Specializing in the MERN stack with robust frontend expertise in
+                Next.js and Tailwind. Transitioning conceptual ideas into
+                secure, scalable digital solutions. Currently exploring advanced
+                backend architectures to build complete SaaS-ready applications.
               </p>
             </FadeIn>
 
             <FadeIn delay={300}>
               {/* className="flex flex-wrap justify-center lg:justify-start gap-4 mb-16" */}
-              <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 pt-2">
                 <button
                   onClick={() => scrollToSection("projects")}
-                  className="w-full sm:w-auto px-10 py-4 bg-primary text-black hover:bg-white font-extrabold rounded-2xl hover:scale-105 active:scale-95 transition-all duration-500 shadow-[0_0_20px_rgba(173,255,47,0.3)]"
+                  className="w-full sm:w-auto px-6 py-4 bg-primary text-black hover:bg-white font-extrabold rounded-2xl hover:scale-105 active:scale-95 transition-all duration-500 shadow-[0_0_20px_rgba(173,255,47,0.3)]"
                 >
-                  View My Work
+                  Explore My Projects
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full sm:w-auto px-10 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
+                  className="w-full sm:w-auto px-5 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all"
                 >
-                  Let's Talk
+                  Schedule a Talk
                 </button>
               </div>
             </FadeIn>
 
             {/* STATS ROW */}
             <FadeIn delay={400}>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-10  ">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-7">
                 {STATS.map((stat, index) => (
                   <div key={index} className="space-y-1">
                     <div className="text-2xl md:text-3xl font-bold text-primary font-mono">
@@ -143,7 +144,7 @@ const Hero: React.FC = () => {
         onClick={() => scrollToSection("about")}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
       >
-        <ChevronDown className="w-8 h-8 text-primary" />
+        <ChevronDown className="w-10 h-10 text-primary" />
       </button>
     </section>
   );

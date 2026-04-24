@@ -10,6 +10,9 @@ import {
   SiTailwindcss,
   SiJavascript,
   SiFirebase,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 interface JourneyItem {
@@ -29,28 +32,28 @@ const TechAndJourney: React.FC = () => {
   const journeyData: JourneyItem[] = [
     {
       year: "2026",
-      title: "Full-Stack Project Development",
+      title: "Advanced Full-Stack Architecture",
       status: "Ongoing",
-      desc: "Building production-ready MERN & Next.js applications with high-end UI/UX.",
+      desc: "Building production-ready, SaaS-grade MERN applications with a focus on high-end UI/UX, optimized performance, and scalable state management.",
       icon: <Briefcase className="w-4 h-4" />,
     },
     {
       year: "2026",
       title: "Backend Development & APIs",
       status: "Ongoing",
-      desc: "Deep diving into Node.js, Express, and complex MongoDB schema designs.",
+      desc: "Deep diving into Node.js, Express, and complex MongoDB schema designs. Engineering secure RESTful APIs and real-time database integrations.",
       icon: <Sparkles className="w-4 h-4" />,
     },
     {
       year: "2025",
       title: "Frontend Development Mastery",
-      desc: "Mastered React, Tailwind CSS, and Framer Motion for interactive web experiences.",
+      desc: "Mastered React.js, Next.js, and Tailwind CSS. Specialized in creating interactive web experiences with Framer Motion.",
       icon: <GraduationCap className="w-4 h-4" />,
     },
     {
       year: "2024",
       title: "Began Coding Journey",
-      desc: "Started with the core fundamentals of the web: HTML, CSS, and Modern JavaScript.",
+      desc: "Started with the core fundamentals of the web: HTML5, CSS3, and Modern JavaScript. Developed a passion for building clean, functional user interfaces.",
       icon: <Calendar className="w-4 h-4" />,
     },
   ];
@@ -58,10 +61,13 @@ const TechAndJourney: React.FC = () => {
   const techStack: TechItem[] = [
     { name: "React.js", icon: SiReact },
     { name: "Next.js", icon: SiNextdotjs },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "JavaScript", icon: SiJavascript },
     { name: "Tailwind", icon: SiTailwindcss },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "TypeScript", icon: SiTypescript },
     { name: "Firebase", icon: SiFirebase },
+    { name: "Node.js", icon: SiNextdotjs },
+    { name: "Express", icon: SiExpress },
+    { name: "Mongodb", icon: SiMongodb },
   ];
 
   return (
@@ -80,8 +86,8 @@ const TechAndJourney: React.FC = () => {
         <div className="text-center mb-16">
           <FadeIn delay={100}>
             <h2 className="text-4xl md:text-5xl font-bold bg-white bg-clip-text text-transparent mb-4">
-              Tech <span className="text-primary italic">Stack</span> &{" "}
-              <span className="text-primary italic">Journey</span>
+              Technical <span className="text-primary italic">Arsenal</span> &{" "}
+              Professional <span className="text-primary italic">Journey</span>
             </h2>
 
             <p className="text-white/50 text-base max-w-2xl mx-auto">

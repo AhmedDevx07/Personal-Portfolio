@@ -23,8 +23,8 @@ const Skills: React.FC = () => {
       "Next.js",
       "Redux",
     ],
-    Backend: ["REST APIs", "Firebase"],
-    Tools: ["Git & Github", "Figma", "Vite", "Responsive Design", "Vs Code"],
+    Backend: ["Node.js", "Express", "REST APIs", "Firebase"],
+    Tools: ["Git & Github", "Figma", "Vite", "Responsive Design", "VS Code"],
   };
 
   return (
@@ -47,8 +47,9 @@ const Skills: React.FC = () => {
             </h2>
 
             <p className="text-white/50 text-lg max-w-2xl mx-auto font-light">
-              Cutting-edge tools and frameworks I use to bring digital visions
-              to life.
+              Engineered with precision. A curated collection of modern tools
+              and frameworks I use to build scalable, high-performance digital
+              solutions.
             </p>
           </div>
         </FadeIn>

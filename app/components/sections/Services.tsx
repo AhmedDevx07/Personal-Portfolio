@@ -3,7 +3,7 @@
 import React from "react";
 import { services } from "@/app/data/services";
 import * as LucideIcons from "lucide-react";
-import { Wrench, ArrowUpRight, LucideIcon } from "lucide-react";
+import { Wrench, LucideIcon } from "lucide-react";
 import FadeIn from "../animations/FadeIn";
 
 const Services: React.FC = () => {
@@ -32,8 +32,8 @@ const Services: React.FC = () => {
               <span className="text-primary italic">Designed for results.</span>
             </h2>
             <p className="text-lg text-white/50 max-w-2xl mx-auto font-light">
-              Transforming complex challenges into seamless digital experiences
-              through modern tech.
+              Transforming complex technical challenges into seamless digital
+              experiences through a modern tech stack and user-centric approach.
             </p>
           </div>
         </FadeIn>
@@ -53,7 +53,6 @@ const Services: React.FC = () => {
                       <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
                         <IconComponent className="w-8 h-8 text-primary group-hover:text-black transition-colors " />
                       </div>
-                      <ArrowUpRight className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500 animate-pulse" />
                     </div>
 
                     <h3 className="text-3xl font-bold text-white mb-4">

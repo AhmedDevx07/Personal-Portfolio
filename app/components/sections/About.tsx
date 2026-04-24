@@ -76,41 +76,50 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">
-                        Modern Stack
+                        Tech Ecosystem
                       </h3>
                       <p className="text-sm text-white/50 leading-relaxed">
-                        MERN & Next.js specialist for high-performance apps.
+                        MERN & Next.js specialist focused on building scalable,
+                        SaaS-grade applications with robust state management.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="relative group">
-                <div className="relative bg-white/[0.03] border border-white/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm h-full">
-                  <div className="p-3 bg-white/5 rounded-xl w-fit mb-6 border border-primary/10 group-hover:bg-primary transition-all duration-500">
-                    <Sparkles className="w-6 h-6 text-primary group-hover:text-black" />
+              <div className="col-span-2 relative group overflow-hidden">
+                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="flex items-center gap-6">
+                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
+                      <Sparkles className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-1">
+                        Aesthetic Precision
+                      </h3>
+                      <p className="text-sm text-white/50 leading-relaxed">
+                        Crafting pixel-perfect, user-centric designs with smooth
+                        Framer Motion animations and premium layouts.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    Clean UI
-                  </h3>
-                  <p className="text-xs text-white/50 leading-relaxed">
-                    User-centric design with smooth animations.
-                  </p>
                 </div>
               </div>
-
-              <div className="relative group">
-                <div className="relative bg-white/[0.03] border border-white/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm h-full">
-                  <div className="p-3 bg-white/5 rounded-xl w-fit mb-6 border border-primary/10 group-hover:bg-primary transition-all duration-500">
-                    <Zap className="w-6 h-6 text-primary group-hover:text-black" />
+              <div className="col-span-2 relative group overflow-hidden">
+                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="flex items-center gap-6">
+                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
+                      <Zap className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-1">
+                        Performance First
+                      </h3>
+                      <p className="text-sm text-white/50 leading-relaxed">
+                        Writing optimized, clean code ensuring maximum speed,
+                        SEO friendliness, and seamless responsiveness.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    Efficiency
-                  </h3>
-                  <p className="text-xs text-white/50 leading-relaxed">
-                    Optimized code for maximum speed.
-                  </p>
                 </div>
               </div>
 

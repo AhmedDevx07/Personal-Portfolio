@@ -33,7 +33,7 @@ export const PERSONAL_INFO: PersonalInfo = {
     "Crafting ultra-modern, SaaS-grade digital experiences with MERN Stack.",
   resume: "/MUHAMMADAHMEDRESUME.pdf",
   bio: [
-    "I'm an aspiring Full Stack Developer currently honing my skills at SMIT. I specialize in building high-performance web applications using React, Next.js, and the MERN ecosystem, with a deep focus on glassmorphism and modern UI/UX.",
+    "I'm a dedicated Full Stack Developer currently honing my expertise at SMIT. I specialize in building high-performance web applications using the MERN ecosystem (MongoDB, Express, React, Node.js) and Next.js. With a deep focus on Glassmorphism and ultra-modern UI/UX design, I aim to bridge the gap between complex backend logic and seamless frontend aesthetics.",
   ],
 };
 
@@ -44,10 +44,10 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const STATS: StatItem[] = [
-  { label: "Years Experience", value: "1+" },
-  { label: "Projects Completed", value: "30+" },
-  { label: "Technologies", value: "12+" },
-  { label: "LinkedIn Followers", value: "1K+" },
+  { label: "YEARS FOCUSED ON MERN", value: "1+" },
+  { label: "PROJECTS COMPLETED", value: "30+" },
+  { label: "MODERN TECHNOLOGIES", value: "15+" },
+  { label: "LinkedIn Followers", value: "1.5K+" },
 ];
 
 export const ABOUT_STATS: StatItem[] = [
