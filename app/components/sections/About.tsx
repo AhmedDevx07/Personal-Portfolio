@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 {PERSONAL_INFO.bio.map((paragraph, index) => (
                   <p
                     key={index}
-                    className="text-lg text-white/50 leading-relaxed font-light"
+                    className="text-lg text-white/60 leading-relaxed font-light"
                   >
                     {paragraph}
                   </p>
@@ -62,16 +62,16 @@ const About: React.FC = () => {
             </FadeIn>
           </div>
 
-          {/* RIGHT: Feature Cards */}
-          <FadeIn delay={200}>
+          <FadeIn delay={400}>
             <div className="grid grid-cols-2 gap-4 relative">
-              {/* Decorative Blur Background */}
-              <div className="absolute -inset-10 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+              {/* Central Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
-              <div className="col-span-2 relative group overflow-hidden">
-                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
-                  <div className="flex items-center gap-6">
-                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
+              {/* Card 1: Tech Stack (Large) */}
+              <div className="col-span-2 group">
+                <div className="bg-white/[0.02] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm relative overflow-hidden">
+                  <div className="flex items-center gap-6 relative z-10">
+                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20 group-hover:rotate-6 transition-transform">
                       <Cpu className="w-8 h-8 text-primary" />
                     </div>
                     <div>
@@ -86,69 +86,68 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-2 relative group overflow-hidden">
-                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
-                  <div className="flex items-center gap-6">
-                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
-                      <Sparkles className="w-8 h-8 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
-                        Aesthetic Precision
-                      </h3>
-                      <p className="text-sm text-white/50 leading-relaxed">
-                        Crafting pixel-perfect, user-centric designs with smooth
-                        Framer Motion animations and premium layouts.
-                      </p>
-                    </div>
+
+              {/* Card 2: Aesthetic (Small) */}
+              <div className="col-span-1 group">
+                <div className="h-full bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
+                    <Sparkles className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500" />
                   </div>
-                </div>
-              </div>
-              <div className="col-span-2 relative group overflow-hidden">
-                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
-                  <div className="flex items-center gap-6">
-                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20">
-                      <Zap className="w-8 h-8 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
-                        Performance First
-                      </h3>
-                      <p className="text-sm text-white/50 leading-relaxed">
-                        Writing optimized, clean code ensuring maximum speed,
-                        SEO friendliness, and seamless responsiveness.
-                      </p>
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Aesthetic Precision
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    {" "}
+                    Writing optimized, clean code ensuring maximum speed, SEO
+                    friendliness, and seamless responsiveness.
+                  </p>
                 </div>
               </div>
 
-              <div className="col-span-2 relative">
-                <div className="relative bg-white/[0.03] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm h-full">
-                  <div className="flex justify-around items-center gap-4">
-                    <div className="space-y-1">
+              {/* Card 3: Performance (Small) */}
+              <div className="col-span-1 group">
+                <div className="h-full bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-2xl  bg-primary/10 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
+                    <Zap className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Performance First
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    {" "}
+                    Writing optimized, clean code ensuring maximum speed, SEO
+                    friendliness, and seamless responsiveness.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4: Stats Bar */}
+              <div className="col-span-2">
+                <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-6 backdrop-blur-xl">
+                  <div className="flex justify-around items-center">
+                    <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         100%
                       </p>
-                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-widest">
-                        Satisfaction
+                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
+                        Quality
                       </p>
                     </div>
-                    <div className="w-px h-10 bg-primary/20" />
-                    <div className="space-y-1">
+                    <div className="w-px h-8 bg-primary/20" />
+                    <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         Fast
                       </p>
-                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-widest">
-                        Delivery
+                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
+                        Response
                       </p>
                     </div>
-                    <div className="w-px h-10 bg-primary/20" />
-                    <div className="space-y-1">
+                    <div className="w-px h-8 bg-primary/20" />
+                    <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         24/7
                       </p>
-                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-widest">
+                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
                         Support
                       </p>
                     </div>

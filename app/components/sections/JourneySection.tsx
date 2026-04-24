@@ -65,7 +65,7 @@ const TechAndJourney: React.FC = () => {
     { name: "JavaScript", icon: SiJavascript },
     { name: "TypeScript", icon: SiTypescript },
     { name: "Firebase", icon: SiFirebase },
-    { name: "Node.js", icon: SiNextdotjs },
+    { name: "Node.js", icon: SiNodedotjs },
     { name: "Express", icon: SiExpress },
     { name: "Mongodb", icon: SiMongodb },
   ];
