@@ -44,10 +44,7 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="w-full space-y-3 max-w-[280px] md:max-w-none">
-                <a
-                  href={`mailto:${PERSONAL_INFO.email}`}
-                  className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-primary/5 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300"
-                >
+                <a className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-primary/5 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                     <Mail className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
@@ -56,11 +53,11 @@ const Footer: React.FC = () => {
                   </span>
                 </a>
 
-                <div className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-white/5 rounded-2xl">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <MapPin className="w-4 h-4 text-primary" />
+                <div className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-white/5 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
+                  <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
+                    <MapPin className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
-                  <span className="text-white/50 text-xs md:text-sm">
+                  <span className="text-white/50 text-xs md:text-sm group-hover:text-white transition-colors truncate">
                     {PERSONAL_INFO.location}
                   </span>
                 </div>
