@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          className="w-full h-full object-fit transition-transform duration-1000 group-hover:scale-105"
         />
 
         {/* Static Overlay Gradient */}
@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         {/* Floating Category Badge (Directly Visible) */}
         <div className="absolute top-5 left-5 z-10">
-          <span className="px-4 py-1.5 text-[9px] font-black uppercase tracking-[2px] text-white bg-black/60 backdrop-blur-md border border-white/10 rounded-full shadow-2xl">
+          <span className="px-4 py-1.5 text-[9px] font-black uppercase tracking-[2px] text-primary bg-black/60 backdrop-blur-md border border-white/10 rounded-full shadow-2xl">
             {category}
           </span>
         </div>
