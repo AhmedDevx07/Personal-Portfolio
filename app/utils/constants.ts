@@ -31,7 +31,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   location: "Karachi, Pakistan",
   tagline:
     "Crafting ultra-modern, SaaS-grade digital experiences with MERN Stack.",
-  resume: "/MUHAMMADAHMEDRESUME.pdf",
+  resume: "MUHAMMAD AHMED RESUME.pdf",
   bio: [
     "I'm a dedicated Full Stack Developer currently honing my expertise at SMIT. I specialize in building high-performance web applications using the MERN ecosystem (MongoDB, Express, React, Node.js) and Next.js. With a deep focus on Glassmorphism and ultra-modern UI/UX design, I aim to bridge the gap between complex backend logic and seamless frontend aesthetics.",
   ],
@@ -39,7 +39,7 @@ export const PERSONAL_INFO: PersonalInfo = {
 
 export const SOCIAL_LINKS: SocialLinks = {
   github: "https://github.com/AhmedDevx07",
-  linkedin: "https://linkedin.com/in/AhmedDevx07",
+  linkedin: "https://linkedin.com/in/ahmeddevx07",
   instagram: "https://instagram.com/AhmedDevx07",
 };
 
