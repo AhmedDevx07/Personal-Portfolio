@@ -22,10 +22,10 @@ const About: React.FC = () => {
           {/* LEFT: Content & Stats */}
           <div className="flex flex-col gap-10 text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center gap-3 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
+              <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <Terminal className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
-                  Full-Stack Developer
+                  Full Stack Developer
                 </span>
               </div>
             </FadeIn>

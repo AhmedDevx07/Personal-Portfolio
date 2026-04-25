@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
@@ -29,15 +29,20 @@ const Hero: React.FC = () => {
           backgroundSize: "40px 40px",
         }}
       />
-      <div className="relative z-10 max-w-7xl px-6 sm:px-8 lg:px-12 py-20 w-full">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl px-5 sm:px-8 lg:px-12 py-20 w-full">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 items-center">
           {/* left column */}
           <div className="text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/10 rounded-full mb-6">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="text-[10px] font-bold text-primary/80 uppercase tracking-[2px]">
-                  {PERSONAL_INFO.title} | Based in {PERSONAL_INFO.location}
+              <div className="inline-flex items-center gap-2 px-4 py-3  bg-white/[0.03] border border-white/10 rounded-full mb-5 max-w-[95%] sm:max-w-full">
+                {/* Status Dot */}
+                <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full animate-pulse" />
+
+                {/* Text Label */}
+                <span className="text-[10px]  font-bold text-primary/80 uppercase tracking-[1px] md:tracking-[2px] leading-tight whitespace-normal sm:whitespace-nowrap">
+                  {PERSONAL_INFO.title}
+                  <span className="mx-1 opacity-50">|</span>
+                  Based in {PERSONAL_INFO.location}
                 </span>
               </div>
             </FadeIn>

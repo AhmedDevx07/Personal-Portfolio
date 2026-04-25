@@ -71,47 +71,63 @@ const TechAndJourney: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative overf ">
-      {/* Dynamic Grid Background */}
+    <section className="pt-24 relative overflow-hidden">
+      {/* Background Grid - Thora aur subtle kiya hai */}
       <div
-        className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(to right,white 1px,transparent 1px),linear-gradient(to bottom,white 1px,transparent 1px)`,
-          backgroundSize: "40px 40px",
+          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+          backgroundSize: "32px 32px",
         }}
       />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <FadeIn delay={100}>
-            <h2 className="text-4xl md:text-5xl font-bold bg-white bg-clip-text text-transparent mb-4">
+            {/* Subtitle Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-4">
+              <Sparkles className="w-3 h-3 text-primary" />
+              <span className="text-[9px] font-bold text-primary uppercase tracking-[2px]">
+                Expertise & Roadmap
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
               Technical <span className="text-primary italic">Arsenal</span> &{" "}
-              Professional <span className="text-primary italic">Journey</span>
+              <span className="relative">
+                Journey
+                <svg
+                  className="absolute -bottom-2 left-0 w-full h-2 text-primary/30"
+                  viewBox="0 0 100 10"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 5 Q 25 0 50 5 T 100 5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </span>
             </h2>
-
-            <p className="text-white/50 text-base max-w-2xl mx-auto">
-              My technical expertise and the roadmap of my professional growth
-              as a developer.
-            </p>
           </FadeIn>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
-          {/* LEFT: TECH STACK GRID (Bento Style) */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* LEFT: TECH STACK GRID */}
           <div className="lg:col-span-7">
             <FadeIn delay={200}>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {techStack.map((skill, index) => (
                   <div
                     key={index}
-                    className="group relative bg-white/[0.03] border border-primary/10 hover:border-primary/30 rounded-[1.5rem] p-8 flex flex-col items-center justify-center gap-4 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                    className="group relative bg-white/[0.02] border border-primary/10 hover:border-primary/40 rounded-[2rem] p-8 flex flex-col items-center justify-center gap-4 transition-all duration-500 backdrop-blur-sm hover:shadow-[0_0_30px_-10px_rgba(var(--primary-rgb),0.3)]"
                   >
-                    {/* Subtle Glow on Hover */}
-                    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Hover Glow Effect */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
-                    <skill.icon className="text-4xl text-primary transition-transform duration-500 group-hover:scale-110" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-white/40 group-hover:text-primary transition-colors">
+                    <skill.icon className="text-4xl text-primary/70 transition-all duration-500 group-hover:text-primary group-hover:scale-110" />
+                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/50 group-hover:text-white transition-colors">
                       {skill.name}
                     </span>
                   </div>
@@ -120,34 +136,36 @@ const TechAndJourney: React.FC = () => {
             </FadeIn>
           </div>
 
-          {/* RIGHT: COMPACT VERTICAL TIMELINE */}
+          {/* RIGHT: TIMELINE WITH BETTER HIERARCHY */}
           <div className="lg:col-span-5">
             <FadeIn delay={400}>
-              <div className="relative pl-10 border-l-2 border-primary/10 space-y-5 ml-4">
+              <div className="relative pl-8 space-y-8 ml-4">
+                {/* Custom Line - Fades out at bottom */}
+                <div className="absolute left-0 top-2 bottom-0 w-[1px] bg-gradient-to-b from-primary via-primary/20 to-transparent" />
+
                 {journeyData.map((item, index) => (
-                  <div key={index} className="relative">
-                    {/* Timeline Dot/Icon */}
-                    <div className="absolute -left-[57px] top-0 w-10 h-10 rounded-xl border border-primary/10 bg-[#0A0A0A] flex items-center justify-center text-primary shadow-2xl group transition-all duration-500">
-                      <div className="absolute  inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div key={index} className="relative group">
+                    {/* Timeline Dot */}
+                    <div className="absolute -left-[45px] top-1 w-8 h-8 rounded-full border border-primary/30 bg-black flex items-center justify-center text-primary z-10 group-hover:scale-110 group-hover:border-primary transition-all duration-500 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]">
                       {item.icon}
                     </div>
 
-                    {/* Journey Card */}
-                    <div className="group bg-white/[0.02] border border-primary/10 p-6 rounded-[2rem] hover:bg-white/[0.05] hover:border-primary/30 transition-all duration-500">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-primary font-mono text-[10px] font-bold tracking-[2px] uppercase">
+                    <div className="bg-white/[0.02] border border-white/5 p-6 rounded-[1.5rem] hover:bg-white/[0.04] hover:border-primary/20 transition-all duration-500">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="px-2 py-0.5 bg-white/5 rounded text-primary font-mono text-[10px] font-bold tracking-widest">
                           {item.year}
                         </span>
                         {item.status && (
-                          <span className="text-[8px] font-black uppercase tracking-widest bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20 animate-pulse">
+                          <span className="flex items-center gap-1.5 text-[8px] font-black uppercase tracking-widest text-primary">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
                             {item.status}
                           </span>
                         )}
                       </div>
-                      <h4 className="text-lg font-bold text-white mb-2 tracking-tight group-hover:text-primary transition-colors">
+                      <h4 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-white/50 leading-relaxed font-medium">
+                      <p className="text-xs text-white/40 leading-relaxed font-normal">
                         {item.desc}
                       </p>
                     </div>

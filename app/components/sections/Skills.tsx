@@ -109,7 +109,7 @@ const Skills: React.FC = () => {
                       key={name}
                       className="p-4 bg-white/[0.03] border border-primary/10 rounded-2xl flex items-center gap-3 group/item hover:bg-primary/5 hover:border-primary/50 transition-all duration-300"
                     >
-                      <div className="text-primary opacity-50 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-300">
+                      <div className="text-primary opacity-70 group-hover/item:opacity-100 group-hover/item:scale-110 transition-all duration-300">
                         {skillIcons[name] || <Icons.Code />}
                       </div>
                       <span className="text-white/70 group-hover/item:text-white font-medium text-sm transition-colors">
@@ -140,7 +140,7 @@ const Skills: React.FC = () => {
                       className="flex justify-between items-center group/line"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="text-primary/50 group-hover/line:text-primary transition-all">
+                        <div className="text-primary/70 group-hover/line:text-primary transition-all">
                           {skillIcons[name] || <Icons.Database />}
                         </div>
                         <span className="text-white/70 group-hover/line:text-primary transition-colors">
@@ -182,7 +182,7 @@ const Skills: React.FC = () => {
                       className="flex items-center gap-3 group/tool"
                     >
                       <div className="w-10 h-10 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center group-hover/tool:border-primary/50 group-hover/tool:bg-primary/10 group-hover/tool:rotate-6 transition-all duration-300">
-                        <div className="text-primary/50 group-hover/tool:text-primary transition-all">
+                        <div className="text-primary/70 group-hover/tool:text-primary transition-all">
                           {skillIcons[name] || <Icons.Box />}
                         </div>
                       </div>

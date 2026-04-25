@@ -67,18 +67,9 @@ const Services: React.FC = () => {
                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-5">
                       {service.title}
                     </h3>
-                    <p className="text-white/50 text-lg leading-relaxed mb-8 font-light">
+                    <p className="text-white/50 text-lg leading-relaxed font-light">
                       {service.description}
                     </p>
-
-                    <div className="flex gap-2">
-                      <span className="px-3 py-1 bg-white/5 border border-primary/10 rounded-full text-[10px] text-white/50 uppercase tracking-widest group-hover:border-primary/30 transition-colors">
-                        Scalable
-                      </span>
-                      <span className="px-3 py-1 bg-white/5 border border-primary/10 rounded-full text-[10px] text-white/50 uppercase tracking-widest group-hover:border-primary/30 transition-colors">
-                        Modern
-                      </span>
-                    </div>
                   </div>
 
                   {/* Corner Blur Effect */}

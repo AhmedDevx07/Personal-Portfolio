@@ -61,39 +61,40 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-24 overflow-hidden">
+      {/* Background Grid */}
       <div
         className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(to right,white 1px,transparent 1px),linear-gradient(to bottom,white 1px,transparent 1px)`,
-          backgroundSize: "40px 40px",
+          backgroundSize: "30px 30px", // Reduced for mobile feel
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <FadeIn>
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
-              <MessageSquare className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-[10px] font-bold text-primary uppercase tracking-[3px]">
-                Contact
+          <div className="text-center mb-12 md:mb-20 px-2">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4 md:mb-6">
+              <MessageSquare className="w-3.5 h-3.5 text-primary animate-pulse" />
+              <span className="text-[9px] md:text-[10px] font-bold text-primary uppercase tracking-[3px]">
+                Get In Touch
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 tracking-tighter leading-tight">
               Let's build something{" "}
               <span className="text-primary italic">great together.</span>
             </h2>
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start max-w-5xl mx-auto lg:max-w-none">
           {/* Left: Contact Form */}
           <FadeIn delay={100}>
-            <div className="relative group bg-white/[0.03] border border-primary/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl backdrop-blur-xl">
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative group bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-xl mx-auto w-full">
+              <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                    <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
                       Name
                     </label>
                     <input
@@ -101,12 +102,12 @@ const Contact: React.FC = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300"
-                      placeholder="What's your name?"
+                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
+                      placeholder="Your Name"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                    <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
                       Email
                     </label>
                     <input
@@ -114,35 +115,35 @@ const Contact: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300"
-                      placeholder="Enter your email address"
+                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
+                      placeholder="Your Email"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-white/50 uppercase tracking-widest ml-1">
-                    Your Message
+                  <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                    Message
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-5 py-4 bg-white/[0.05] border border-white/10 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all duration-300 resize-none"
-                    placeholder="Tell me about your project or just say hi..."
+                    className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm resize-none"
+                    placeholder="Tell me about your project..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full group relative flex items-center justify-center gap-3 px-8 py-5 bg-primary text-black font-bold rounded-2xl hover:bg-white transition-all duration-500 overflow-hidden"
+                  className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 bg-primary text-black font-black uppercase text-[11px] tracking-widest rounded-xl hover:bg-white transition-all duration-500 overflow-hidden active:scale-[0.98]"
                 >
-                  <span className="relative z-10">Send Message</span>
+                  Send Message
                 </button>
 
                 {status.message && (
                   <div
-                    className={`text-center text-sm font-bold mt-4 ${status.type === "success" ? "text-primary" : "text-red-400"}`}
+                    className={`text-center text-[10px] font-bold mt-2 ${status.type === "success" ? "text-primary" : "text-red-400"}`}
                   >
                     {status.message}
                   </div>
@@ -152,57 +153,59 @@ const Contact: React.FC = () => {
           </FadeIn>
 
           {/* Right: Info Cards */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8 w-full max-w-[500px] mx-auto lg:mx-0">
             <FadeIn delay={200}>
-              <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-white tracking-tight">
-                  Available for new opportunities
-                </h3>
-                <p className="text-white/50 font-light leading-relaxed max-w-md">
-                  Based in Karachi, Pakistan, but working with clients globally.
-                  Whether you have a specific project in mind or just want to
-                  bridge the gap between an idea and a digital reality—let's
-                  connect and make it happen.
-                </p>
+              <div className="space-y-6 text-center lg:text-left">
+                <div className="space-y-3">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                    Available for new opportunities
+                  </h3>
+                  <p className="text-white/50 font-light leading-relaxed text-sm md:text-base">
+                    Based in Karachi, Pakistan, but working with clients
+                    globally. Whether you have a specific project in mind or
+                    just want to bridge the gap between an idea and a digital
+                    reality—let's connect and make it happen.
+                  </p>
+                </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-6 p-6 bg-white/[0.02] border border-white/5 rounded-3xl hover:border-primary/30 transition-all duration-500 group">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all duration-500">
-                      <Mail className="w-6 h-6 text-primary group-hover:text-black" />
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all group">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+                      <Mail className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-[2px] mb-1">
+                    <div className="text-left">
+                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-[2px] mb-0.5">
                         Email Me
                       </p>
                       <a
                         href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-lg text-white hover:text-primary transition-colors"
+                        className="text-sm md:text-base text-white hover:text-primary transition-colors truncate block max-w-[200px] sm:max-w-none"
                       >
                         {PERSONAL_INFO.email}
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6 p-6 bg-white/[0.02] border border-white/5 rounded-3xl hover:border-primary/30 transition-all duration-500 group">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all duration-500">
-                      <MapPin className="w-6 h-6 text-primary group-hover:text-black" />
+                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all group">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+                      <MapPin className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-[2px] mb-1">
+                    <div className="text-left">
+                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-[2px] mb-0.5">
                         Location
                       </p>
-                      <p className="text-lg text-white hover:text-primary transition-colors">
+                      <p className="text-sm md:text-base text-white">
                         {PERSONAL_INFO.location}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-8">
-                  <p className="text-[10px] font-bold text-white/50 uppercase tracking-[3px] mb-6">
+                <div className="pt-4">
+                  <p className="text-[9px] font-bold text-white/50 uppercase tracking-[3px] mb-4">
                     Social Discovery
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex justify-center lg:justify-start gap-3">
                     {Object.entries(SOCIAL_LINKS)
                       .slice(0, 3)
                       .map(([platform, url]) => {
@@ -213,9 +216,9 @@ const Contact: React.FC = () => {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-14 h-14 flex items-center justify-center bg-white/[0.03] border border-primary/10 rounded-2xl hover:bg-primary hover:border-primary transition-all duration-500 group"
+                            className="w-12 h-12 flex items-center justify-center bg-white/[0.03] border border-primary/20 rounded-xl hover:bg-primary hover:border-primary transition-all group"
                           >
-                            <Icon className="w-6 h-6 text-white/50 group-hover:text-black transition-colors" />
+                            <Icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />
                           </a>
                         ) : null;
                       })}

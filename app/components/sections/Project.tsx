@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
         </FadeIn>
 
         {/* Filter Categories */}
-        <FadeIn delay={100}>
+        <FadeIn delay={50}>
           <div className="flex flex-wrap justify-center gap-4 mb-20">
             {categories.map((category) => (
               <button
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/20 text-xl italic">
+            <p className="text-white/50 text-xl italic">
               No projects found in this category...
             </p>
           </div>
