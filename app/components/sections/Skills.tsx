@@ -23,7 +23,6 @@ import {
 import FadeIn from "../animations/FadeIn";
 
 const skillIcons: Record<string, React.ReactNode> = {
-  // Frontend
   HTML: <SiHtml5 className="w-4 h-4" />,
   CSS: <SiCss className="w-4 h-4" />,
   Bootstrap: <SiBootstrap className="w-4 h-4" />,
@@ -34,14 +33,12 @@ const skillIcons: Record<string, React.ReactNode> = {
   "Next.js": <SiNextdotjs className="w-4 h-4" />,
   Redux: <SiRedux className="w-4 h-4" />,
 
-  // Backend
   "Node.js": <SiNodedotjs className="w-4 h-4" />,
   Express: <SiExpress className="w-4 h-4" />,
   MongoDB: <SiMongodb className="w-4 h-4" />,
   "REST APIs": <Icons.Database className="w-4 h-4" />,
   Firebase: <SiFirebase className="w-4 h-4" />,
 
-  // Tools
   "Git & Github": <SiGithub className="w-4 h-4" />,
   Figma: <SiFigma className="w-4 h-4" />,
   Vite: <SiVite className="w-4 h-4" />,

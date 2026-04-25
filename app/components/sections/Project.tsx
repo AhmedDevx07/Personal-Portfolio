@@ -60,10 +60,10 @@ const Projects: React.FC = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`group relative px-8 py-3 rounded-2xl font-medium transition-all duration-500 overflow-hidden ${
+                className={`group relative px-8 py-3 rounded-2xl font-medium transition-all duration-500 overflow-hidden cursor-pointer ${
                   activeCategory === category
                     ? "text-black"
-                    : "text-white/60 hover:text-primary border border-primary/10"
+                    : "text-white/70 hover:text-primary border border-primary/20"
                 }`}
               >
                 {/* Background Fill for Active State */}

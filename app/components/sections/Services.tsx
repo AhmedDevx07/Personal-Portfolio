@@ -7,6 +7,10 @@ import { Wrench, LucideIcon, ArrowUpRight } from "lucide-react";
 import FadeIn from "../animations/FadeIn";
 
 const Services: React.FC = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section id="services" className="relative py-24 overflow-hidden">
       {/* 1. Improved Background Elements */}
@@ -52,7 +56,10 @@ const Services: React.FC = () => {
               ] as LucideIcon) || LucideIcons.Code2;
             return (
               <FadeIn key={service.id} delay={100 + index * 100}>
-                <div className="relative bg-white/[0.02] border border-primary/10 rounded-[3rem] p-10 hover:border-primary/50 transition-all duration-700 group h-full overflow-hidden backdrop-blur-xl">
+                <div
+                  onClick={() => scrollToSection("contact")}
+                  className="relative bg-white/[0.02] border border-primary/10 rounded-[3rem] p-10 hover:border-primary/50 transition-all duration-700 group h-full overflow-hidden backdrop-blur-xl"
+                >
                   {/* Subtle Top Light effect */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
@@ -89,10 +96,13 @@ const Services: React.FC = () => {
               ] as LucideIcon) || LucideIcons.Code2;
             return (
               <FadeIn key={service.id} delay={300 + index * 100}>
-                <div className="relative bg-white/[0.01] border border-primary/10 rounded-[2rem] p-8 hover:bg-white/[0.03] hover:border-primary/30 transition-all duration-500 group h-full flex flex-col backdrop-blur-sm">
-                  <div className="mb-6 flex justify-between items-center">
+                <div
+                  onClick={() => scrollToSection("contact")}
+                  className="relative bg-white/[0.01] border border-primary/10 rounded-[2rem] p-8 hover:bg-white/[0.03] hover:border-primary/30 transition-all duration-500 group h-full flex flex-col backdrop-blur-sm"
+                >
+                  <div className="mb-6 flex justify-between items-center ">
                     <div className="w-14 h-14 rounded-2xl bg-white/5 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500">
-                      <IconComponent className="w-6 h-6 text-primary/50 group-hover:text-primary transition-colors duration-500" />
+                      <IconComponent className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors duration-500" />
                     </div>
                   </div>
                   <div className="flex-1">

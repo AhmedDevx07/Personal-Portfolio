@@ -53,7 +53,7 @@ const About: React.FC = () => {
 
             <FadeIn delay={400}>
               <button
-                className="inline-flex items-center gap-3 bg-primary hover:bg-white text-black rounded-2xl px-10 py-5 text-sm font-bold transition-all duration-500 w-fit group shadow-xl shadow-primary/10"
+                className="inline-flex items-center gap-3 bg-primary hover:bg-white text-black rounded-2xl px-10 py-5 text-sm font-bold transition-all duration-500 w-fit group shadow-xl shadow-primary/10 cursor-pointer"
                 onClick={() => window.open(PERSONAL_INFO.resume, "_blank")}
               >
                 <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-500" />

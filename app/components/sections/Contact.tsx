@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import { Mail, MapPin, MessageSquare } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/app/utils/constants";
 import FadeIn from "../animations/FadeIn";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   name: string;
@@ -18,12 +19,14 @@ interface Status {
 }
 
 const Contact: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
   const [status, setStatus] = useState<Status>({ type: "", message: "" });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -45,12 +48,40 @@ const Contact: React.FC = () => {
       return;
     }
 
-    setStatus({
-      type: "success",
-      message: "Message sent! I'll get back to you soon.",
-    });
+    setLoading(true);
 
-    setFormData({ name: "", email: "", message: "" });
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_hauu2c9",
+        "template_cco809g",
+        templateParams,
+        "NdkPmTmibn7Jm54o2",
+      )
+      .then(
+        () => {
+          setStatus({
+            type: "success",
+            message: "Message sent! I'll get back to you soon.",
+          });
+          setFormData({ name: "", email: "", message: "" });
+          setLoading(false);
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          setStatus({
+            type: "error",
+            message: "Failed to send. Please try again later.",
+          });
+          setLoading(false);
+        },
+      );
+
     setTimeout(() => setStatus({ type: "", message: "" }), 5000);
   };
 
@@ -67,7 +98,7 @@ const Contact: React.FC = () => {
         className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(to right,white 1px,transparent 1px),linear-gradient(to bottom,white 1px,transparent 1px)`,
-          backgroundSize: "30px 30px", // Reduced for mobile feel
+          backgroundSize: "30px 30px",
         }}
       />
 
@@ -80,7 +111,7 @@ const Contact: React.FC = () => {
                 Get In Touch
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 tracking-tighter leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 tracking-tighter leading-tight">
               Let's build something{" "}
               <span className="text-primary italic">great together.</span>
             </h2>
@@ -88,10 +119,14 @@ const Contact: React.FC = () => {
         </FadeIn>
 
         <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start max-w-5xl mx-auto lg:max-w-none">
-          {/* Left: Contact Form */}
           <FadeIn delay={100}>
             <div className="relative group bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-xl mx-auto w-full">
-              <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
+              {/* Added ref={formRef} */}
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="space-y-5 relative z-10"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
                     <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
@@ -136,9 +171,10 @@ const Contact: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 bg-primary text-black font-black uppercase text-[11px] tracking-widest rounded-xl hover:bg-white transition-all duration-500 overflow-hidden active:scale-[0.98]"
+                  disabled={loading}
+                  className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 bg-primary text-black font-black uppercase text-[11px] tracking-widest rounded-xl hover:bg-white transition-all duration-500 overflow-hidden active:scale-[0.98] disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
 
                 {status.message && (
@@ -169,7 +205,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all group">
+                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all duration-300 group">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
                       <Mail className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
@@ -177,10 +213,7 @@ const Contact: React.FC = () => {
                       <p className="text-[9px] font-bold text-white/50 uppercase tracking-[2px] mb-0.5">
                         Email Me
                       </p>
-                      <a
-                        href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-sm md:text-base text-white hover:text-primary transition-colors truncate block max-w-[200px] sm:max-w-none"
-                      >
+                      <a className="text-sm md:text-base text-white hover:text-primary transition-colors truncate block max-w-[200px] sm:max-w-none">
                         {PERSONAL_INFO.email}
                       </a>
                     </div>
@@ -216,7 +249,7 @@ const Contact: React.FC = () => {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 flex items-center justify-center bg-white/[0.03] border border-primary/20 rounded-xl hover:bg-primary hover:border-primary transition-all group"
+                            className="w-12 h-12 flex items-center justify-center bg-white/[0.03] border border-primary/20 rounded-xl hover:bg-primary hover:border-primary duration-300 transition-all group"
                           >
                             <Icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />
                           </a>
