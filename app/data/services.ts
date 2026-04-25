@@ -1,6 +1,6 @@
 export interface Service {
   id: number;
-  icon: string; 
+  icon: string;
   title: string;
   description: string;
 }
