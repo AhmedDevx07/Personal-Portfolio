@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-3">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-2">
       <div
         className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
             {/* STATS ROW */}
             <FadeIn delay={400}>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-10">
                 {STATS.map((stat, index) => (
                   <div key={index} className="space-y-1">
                     <div className="text-2xl md:text-3xl font-bold text-primary font-mono">
@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
       {/* Scroll Indictor  */}
       <button
         onClick={() => scrollToSection("about")}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+        className="absolute bottom-9 left-1/2 -translate-x-1/2 animate-bounce"
       >
         <ChevronDown className="w-10 h-10 text-primary" />
       </button>
