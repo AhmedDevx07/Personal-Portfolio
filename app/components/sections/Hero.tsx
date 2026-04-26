@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Terminal } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
@@ -34,11 +34,10 @@ const Hero: React.FC = () => {
           {/* left column */}
           <div className="text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center px-3 py-3  bg-white/[0.03] border border-white/10 rounded-full mb-5 max-w-[95%] sm:max-w-full">
-                {/* Text Label */}
-                <span className="text-[10px]  font-bold text-primary/80 uppercase tracking-[1px] md:tracking-[2px] leading-tight whitespace-normal sm:whitespace-nowrap">
+              <div className="inline-flex items-center mb-6 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
+                <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
                   {PERSONAL_INFO.title}
-                  <span className="mx-1 opacity-50">|</span>
+                  <span className="mx-1 opacity-70">|</span>
                   Based in {PERSONAL_INFO.location}
                 </span>
               </div>
