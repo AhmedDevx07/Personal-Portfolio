@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-2">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-3">
       <div
         className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           {/* left column */}
           <div className="text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center mb-6 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
+              <div className="inline-flex items-center mb-5 px-3 py-3 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
                   {PERSONAL_INFO.title}
                   <span className="mx-1 opacity-70">|</span>
@@ -47,16 +47,16 @@ const Hero: React.FC = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter mb-6">
                 Crafting <span className="text-primary italic">Scalable</span>{" "}
                 <br />
-                Web Solutions.
+                Web Applications
               </h1>
             </FadeIn>
 
             <FadeIn delay={200}>
               <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-6 leading-relaxed">
-                Specializing in the MERN stack with robust frontend expertise in
-                Next.js and Tailwind. Transitioning conceptual ideas into
-                secure, scalable digital solutions. Currently exploring advanced
-                backend architectures to build complete SaaS-ready applications.
+                I build modern, high-performance web applications using
+                React.js, Next.js, and Tailwind CSS. Passionate about clean UI,
+                scalability, and continuously growing towards Full-stack MERN
+                development.
               </p>
             </FadeIn>
 
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
             {/* STATS ROW */}
             <FadeIn delay={400}>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-7">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8">
                 {STATS.map((stat, index) => (
                   <div key={index} className="space-y-1">
                     <div className="text-2xl md:text-3xl font-bold text-primary font-mono">

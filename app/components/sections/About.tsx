@@ -25,7 +25,7 @@ const About: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <Terminal className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
-                  Full Stack Developer
+                  Frontend Developer
                 </span>
               </div>
             </FadeIn>
@@ -79,8 +79,9 @@ const About: React.FC = () => {
                         Tech Ecosystem
                       </h3>
                       <p className="text-sm text-white/50 leading-relaxed">
-                        MERN & Next.js specialist focused on building scalable,
-                        SaaS-grade applications with robust state management.
+                        Working with the MERN stack and Next.js to build modern,
+                        scalable web applications, with a focus on performance,
+                        clean architecture, and effective state management.
                       </p>
                     </div>
                   </div>
@@ -98,8 +99,9 @@ const About: React.FC = () => {
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed">
                     {" "}
-                    Writing optimized, clean code ensuring maximum speed, SEO
-                    friendliness, and seamless responsiveness.
+                    Designing clean, modern, and visually appealing user
+                    interfaces with a strong focus on usability, consistency,
+                    and responsive design.
                   </p>
                 </div>
               </div>
@@ -115,8 +117,9 @@ const About: React.FC = () => {
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed">
                     {" "}
-                    Writing optimized, clean code ensuring maximum speed, SEO
-                    friendliness, and seamless responsiveness.
+                    Building optimized web applications with efficient
+                    rendering, fast load times, and a focus on performance best
+                    practices in React and Next.js.
                   </p>
                 </div>
               </div>
@@ -129,7 +132,7 @@ const About: React.FC = () => {
                       <p className="text-2xl font-black text-primary italic leading-none">
                         100%
                       </p>
-                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
+                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
                         Quality
                       </p>
                     </div>
@@ -138,7 +141,7 @@ const About: React.FC = () => {
                       <p className="text-2xl font-black text-primary italic leading-none">
                         Fast
                       </p>
-                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
+                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
                         Response
                       </p>
                     </div>
@@ -147,7 +150,7 @@ const About: React.FC = () => {
                       <p className="text-2xl font-black text-primary italic leading-none">
                         24/7
                       </p>
-                      <p className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-1">
+                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
                         Support
                       </p>
                     </div>

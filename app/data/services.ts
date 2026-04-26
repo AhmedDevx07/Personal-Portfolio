@@ -11,41 +11,41 @@ export const services: Service[] = [
     icon: "Layout",
     title: "Frontend Development",
     description:
-      "Crafting high-performance, interactive user interfaces using React.js and Next.js with a strong focus on scalable and clean code architecture.",
+      "Building modern, responsive user interfaces using React.js and Next.js with a focus on clean, maintainable code and scalability.",
   },
   {
     id: 2,
     icon: "Smartphone",
     title: "Responsive Design",
     description:
-      "Developing mobile-first, fluid layouts that provide a flawless experience across all screen sizes—from high-res monitors to handheld devices.",
+      "Creating mobile-first, fully responsive layouts that deliver a consistent experience across all devices and screen sizes.",
   },
   {
     id: 3,
     icon: "Zap",
     title: "Performance Optimization",
     description:
-      "Accelerating web applications with advanced techniques like code splitting, lazy loading, and asset optimization for lightning-fast load times.",
+      "Improving application performance through techniques like code splitting, lazy loading, and efficient rendering in React and Next.js.",
   },
   {
     id: 4,
     icon: "Database",
-    title: "Full-Stack Solutions",
+    title: "Full-Stack Learning",
     description:
-      "Engineering scalable backend architectures and real-time databases using Firebase, Node.js, and MongoDB to power data-driven applications.",
+      "Currently expanding into backend development with Node.js, Express, and MongoDB to build complete MERN stack applications.",
   },
   {
     id: 5,
     icon: "Figma",
     title: "UI/UX to Code",
     description:
-      "Converting complex Figma designs into pixel-perfect, functional web components with high-end animations and precise aesthetic styling.",
+      "Transforming Figma and design concepts into clean, responsive, and user-friendly web interfaces with attention to detail.",
   },
   {
     id: 6,
     icon: "Search",
-    title: "SEO & Branding",
+    title: "SEO Fundamentals",
     description:
-      "Optimizing web structures for search engines to maximize visibility and establishing a consistent digital identity for your professional brand.",
+      "Applying basic SEO practices such as semantic HTML, accessibility, and performance optimization to improve visibility.",
   },
 ];

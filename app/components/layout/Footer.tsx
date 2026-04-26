@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="w-full space-y-3 max-w-[280px] md:max-w-none">
-                <a className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-primary/5 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
+                <a className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-primary/10 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                     <Mail className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                   </span>
                 </a>
 
-                <div className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-white/5 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
+                <div className="group flex items-center gap-3 p-3.5 bg-white/[0.03] border border-primary/10 rounded-2xl hover:bg-white/[0.08] hover:border-primary/20 transition-all duration-300">
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                     <MapPin className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
@@ -124,16 +124,16 @@ const Footer: React.FC = () => {
         <FadeIn delay={300}>
           <div className="pt-10 border-t border-white/5">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
-              <p className="text-white/50 text-[9px] font-black uppercase tracking-[4px] text-center md:text-left">
+              <p className="text-white/60 text-[9px] font-black uppercase tracking-[4px] text-center md:text-left">
                 © {new Date().getFullYear()} {PERSONAL_INFO.name.toUpperCase()}
               </p>
 
-              <div className="px-6 py-2.5 bg-white/[0.02] border border-white/5 rounded-full flex items-center gap-3">
-                <span className="text-white/50 text-[8px] font-black uppercase tracking-[2px]">
+              <div className="px-6 py-2.5 bg-white/[0.02] border border-primary/10 rounded-full flex items-center gap-3">
+                <span className="text-white/60 text-[8px] font-black uppercase tracking-[2px]">
                   Built with
                 </span>
                 <Heart className="w-3 h-3 text-primary fill-primary animate-pulse" />
-                <span className="text-white/50 text-[8px] font-black uppercase tracking-[2px]">
+                <span className="text-white/60 text-[8px] font-black uppercase tracking-[2px]">
                   in Karachi
                 </span>
               </div>

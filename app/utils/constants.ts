@@ -26,14 +26,14 @@ export interface NavLink {
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: "Muhammad Ahmed",
-  title: "Full Stack MERN Developer",
+  title: "Frontend Developer",
   email: "ahmedoffice69@gmail.com",
   location: "Karachi, Pakistan",
   tagline:
-    "Crafting ultra-modern, SaaS-grade digital experiences with MERN Stack.",
+    "Crafting modern, scalable and user-friendly web applications with React & Next.js.",
   resume: "MUHAMMAD AHMED RESUME.pdf",
   bio: [
-    "I'm a dedicated Full Stack Developer currently honing my expertise at SMIT. I specialize in building high-performance web applications using the MERN ecosystem (MongoDB, Express, React, Node.js) and Next.js. With a deep focus on Glassmorphism and ultra-modern UI/UX design, I aim to bridge the gap between complex backend logic and seamless frontend aesthetics.",
+    "I'm a passionate Frontend Developer currently learning Full Stack MERN development at SMIT. I have built a strong foundation in modern frontend technologies including HTML, CSS, JavaScript, and TypeScript, and I specialize in building responsive and high-performance web applications using React.js and Next.js.",
   ],
 };
 
@@ -44,16 +44,10 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const STATS: StatItem[] = [
-  { label: "YEARS FOCUSED ON MERN", value: "1+" },
-  { label: "PROJECTS COMPLETED", value: "30+" },
-  { label: "MODERN TECHNOLOGIES", value: "15+" },
-  { label: "LinkedIn Followers", value: "1.5K+" },
-];
-
-export const ABOUT_STATS: StatItem[] = [
-  { label: "UI Components", value: "100+" },
-  { label: "Hours Coding", value: "2.5K+" },
-  { label: "Success Rate", value: "100%" },
+  { label: "Months of Experience", value: "12+" },
+  { label: "Projects Built", value: "30+" },
+  { label: "Technologies Used", value: "10+" },
+  { label: "LinkedIn Network", value: "1.5K+" },
 ];
 
 export const NAV_LINKS: NavLink[] = [

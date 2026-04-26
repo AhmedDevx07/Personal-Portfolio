@@ -64,17 +64,17 @@ const Services: React.FC = () => {
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                   <div className="relative z-10">
-                    <div className="mb-10 flex justify-between items-start">
-                      <div className="w-20 h-20 rounded-[1.5rem] bg-white/5 border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] transition-all duration-700">
-                        <IconComponent className="w-10 h-10 text-primary group-hover:text-black transition-colors duration-500" />
+                    <div className="mb-7 flex justify-between items-start">
+                      <div className="w-18 h-18 rounded-[1.5rem] bg-white/5 border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] transition-all duration-700">
+                        <IconComponent className="w-8 h-8 text-primary group-hover:text-black transition-colors duration-500" />
                       </div>
                       <ArrowUpRight className="w-6 h-6 text-white/20 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-5">
+                    <h3 className="text-3xl font-bold text-white mb-4">
                       {service.title}
                     </h3>
-                    <p className="text-white/50 text-lg leading-relaxed font-light">
+                    <p className="text-white/50 text-base leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>
