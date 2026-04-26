@@ -86,7 +86,7 @@ const TechAndJourney: React.FC = () => {
         <div className="text-center mb-20">
           <FadeIn delay={100}>
             {/* Subtitle Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
               <Sparkles className="w-3 h-3 text-primary" />
               <span className="text-[9px] font-bold text-primary uppercase tracking-[2px]">
                 Expertise & Roadmap

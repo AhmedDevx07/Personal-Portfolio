@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           {/* left column */}
           <div className="text-center lg:text-left">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center mb-5 px-3 py-3 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
+              <div className="inline-flex mb-5 px-5 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
                   {PERSONAL_INFO.title}
                   <span className="mx-1 opacity-70">|</span>
