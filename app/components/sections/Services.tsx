@@ -40,7 +40,7 @@ const Services: React.FC = () => {
               Built for innovation, <br />
               <span className="text-primary italic">Designed for results.</span>
             </h2>
-            <p className="text-lg md:text-xl text-white/40 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
               Transforming complex technical challenges into seamless digital
               experiences through a modern tech stack.
             </p>
@@ -58,23 +58,23 @@ const Services: React.FC = () => {
               <FadeIn key={service.id} delay={100 + index * 100}>
                 <div
                   onClick={() => scrollToSection("contact")}
-                  className="relative bg-white/[0.02] border border-primary/10 rounded-[3rem] p-10 hover:border-primary/50 transition-all duration-700 group h-full overflow-hidden backdrop-blur-xl"
+                  className="relative bg-white/[0.02] border border-primary/20 rounded-[3rem] p-10 hover:border-primary/50 transition-all duration-700 group h-full overflow-hidden backdrop-blur-xl"
                 >
                   {/* Subtle Top Light effect */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                   <div className="relative z-10">
                     <div className="mb-7 flex justify-between items-start">
-                      <div className="w-18 h-18 rounded-[1.5rem] bg-white/5 border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] transition-all duration-700">
+                      <div className="w-18 h-18 rounded-[1.5rem] bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] transition-all duration-700">
                         <IconComponent className="w-8 h-8 text-primary group-hover:text-black transition-colors duration-500" />
                       </div>
-                      <ArrowUpRight className="w-6 h-6 text-white/20 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
+                      <ArrowUpRight className="w-6 h-6 text-primary/80 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
                     </div>
 
                     <h3 className="text-3xl font-bold text-white mb-4">
                       {service.title}
                     </h3>
-                    <p className="text-white/50 text-base leading-relaxed font-light">
+                    <p className="text-white/60 text-base leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>
@@ -98,18 +98,18 @@ const Services: React.FC = () => {
               <FadeIn key={service.id} delay={300 + index * 100}>
                 <div
                   onClick={() => scrollToSection("contact")}
-                  className="relative bg-white/[0.01] border border-primary/10 rounded-[2rem] p-8 hover:bg-white/[0.03] hover:border-primary/30 transition-all duration-500 group h-full flex flex-col backdrop-blur-sm"
+                  className="relative bg-white/[0.02] border border-primary/20 rounded-[2rem] p-8 hover:bg-white/[0.03] hover:border-primary/30 transition-all duration-500 group h-full flex flex-col backdrop-blur-sm"
                 >
                   <div className="mb-6 flex justify-between items-center ">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500">
-                      <IconComponent className="w-6 h-6 text-primary/70 group-hover:text-primary transition-colors duration-500" />
+                    <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500">
+                      <IconComponent className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500" />
                     </div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-white/50 leading-relaxed font-light line-clamp-3">
+                    <p className="text-sm text-white/60 leading-relaxed font-light line-clamp-3">
                       {service.description}
                     </p>
                   </div>

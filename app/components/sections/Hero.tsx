@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full sm:w-auto px-5 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all cursor-pointer"
+                  className="w-full sm:w-auto px-5 py-4 bg-primary/5 border border-primary/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all cursor-pointer"
                 >
                   Schedule a Talk
                 </button>
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                     <div className="text-2xl md:text-3xl font-bold text-primary font-mono">
                       {stat.value}
                     </div>
-                    <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest">
+                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest">
                       {stat.label}
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
                 {/* Technology Logos */}
                 <div className="absolute bottom-6 left-6 z-20">
                   <FadeIn delay={500}>
-                    <div className="flex items-center gap-4 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-3">
+                    <div className="flex items-center gap-4 bg-black/40 backdrop-blur-md border border-primary/20 rounded-full px-6 py-3">
                       {[
                         SiReact,
                         SiNextdotjs,

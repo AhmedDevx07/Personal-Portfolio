@@ -58,7 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300 mb-3 tracking-tighter">
             {title}
           </h3>
-          <p className="text-white/50 text-sm leading-relaxed line-clamp-2 font-light">
+          <p className="text-white/60 text-sm leading-relaxed line-clamp-2 font-light">
             {description}
           </p>
         </div>
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 text-[10px] font-bold text-white/50 bg-white/5 border border-white/5 rounded-md group-hover:border-primary/20 group-hover:text-primary transition-all duration-300 uppercase tracking-tighter"
+              className="px-3 py-1 text-[10px] font-bold text-white/60 bg-white/5 border border-white/10 rounded-md group-hover:border-primary/20 group-hover:text-primary transition-all duration-300 uppercase tracking-tighter"
             >
               {tech}
             </span>

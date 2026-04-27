@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                     <Mail className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
-                  <span className="text-white/50 text-xs md:text-sm group-hover:text-white transition-colors truncate">
+                  <span className="text-white/70 text-xs md:text-sm group-hover:text-white transition-colors truncate">
                     {PERSONAL_INFO.email}
                   </span>
                 </a>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                     <MapPin className="w-4 h-4 text-primary group-hover:text-black" />
                   </div>
-                  <span className="text-white/50 text-xs md:text-sm group-hover:text-white transition-colors truncate">
+                  <span className="text-white/70 text-xs md:text-sm group-hover:text-white transition-colors truncate">
                     {PERSONAL_INFO.location}
                   </span>
                 </div>
@@ -76,9 +76,9 @@ const Footer: React.FC = () => {
                   <li key={link.id}>
                     <button
                       onClick={() => scrollToSection(link.id)}
-                      className="group flex items-center gap-2 text-white/50 hover:text-primary transition-all duration-300"
+                      className="group flex items-center gap-2 text-white/70 hover:text-primary transition-all duration-300"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-primary group-hover:w-3 transition-all duration-300" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/40 group-hover:bg-primary group-hover:w-3 transition-all duration-300" />
                       <span className="text-xs md:text-sm font-medium">
                         {link.label}
                       </span>
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
               <h4 className="text-white font-bold mb-6 text-lg uppercase tracking-widest text-primary/80">
                 Connect
               </h4>
-              <p className="text-white/50 text-sm mb-8 leading-relaxed max-w-[240px] md:max-w-none">
+              <p className="text-white/60 text-sm mb-8 leading-relaxed max-w-[240px] md:max-w-none">
                 Let's bridge the gap between your ideas and digital reality.
               </p>
               <div className="flex gap-3">
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
                 © {new Date().getFullYear()} {PERSONAL_INFO.name.toUpperCase()}
               </p>
 
-              <div className="px-6 py-2.5 bg-white/[0.02] border border-primary/10 rounded-full flex items-center gap-3">
+              <div className="px-6 py-2.5 bg-white/[0.02] border border-primary/20 rounded-full flex items-center gap-3">
                 <span className="text-white/60 text-[8px] font-black uppercase tracking-[2px]">
                   Built with
                 </span>

@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start max-w-5xl mx-auto lg:max-w-none">
           <FadeIn delay={100}>
-            <div className="relative group bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-xl mx-auto w-full">
+            <div className="relative group bg-white/[0.02] border border-primary/20 rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-2xl backdrop-blur-xl mx-auto w-full">
               {/* Added ref={formRef} */}
               <form
                 ref={formRef}
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                    <label className="text-[9px] font-bold text-white/60 uppercase tracking-widest ml-1">
                       Name
                     </label>
                     <input
@@ -142,7 +142,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                    <label className="text-[9px] font-bold text-white/60 uppercase tracking-widest ml-1">
                       Email
                     </label>
                     <input
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[9px] font-bold text-white/50 uppercase tracking-widest ml-1">
+                  <label className="text-[9px] font-bold text-white/60 uppercase tracking-widest ml-1">
                     Message
                   </label>
                   <textarea
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
                   <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
                     Available for new opportunities
                   </h3>
-                  <p className="text-white/50 font-light leading-relaxed text-sm md:text-base">
+                  <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
                     Based in Karachi, Pakistan, but working with clients
                     globally. Whether you have a specific project in mind or
                     just want to bridge the gap between an idea and a digital
@@ -205,12 +205,12 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all duration-300 group">
+                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/20 rounded-2xl hover:border-primary/30 transition-all duration-300 group">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
                       <Mail className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
                     <div className="text-left">
-                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-[2px] mb-0.5">
+                      <p className="text-[9px] font-bold text-white/60 uppercase tracking-[2px] mb-0.5">
                         Email Me
                       </p>
                       <a className="text-sm md:text-base text-white hover:text-primary transition-colors truncate block max-w-[200px] sm:max-w-none">
@@ -219,12 +219,12 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/10 rounded-2xl hover:border-primary/30 transition-all group">
+                  <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/20 rounded-2xl hover:border-primary/30 transition-all group">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
                       <MapPin className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
                     <div className="text-left">
-                      <p className="text-[9px] font-bold text-white/50 uppercase tracking-[2px] mb-0.5">
+                      <p className="text-[9px] font-bold text-white/60 uppercase tracking-[2px] mb-0.5">
                         Location
                       </p>
                       <p className="text-sm md:text-base text-white">
@@ -235,7 +235,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="pt-4">
-                  <p className="text-[9px] font-bold text-white/50 uppercase tracking-[3px] mb-4">
+                  <p className="text-[9px] font-bold text-white/60 uppercase tracking-[3px] mb-4">
                     Social Discovery
                   </p>
                   <div className="flex justify-center lg:justify-start gap-3">

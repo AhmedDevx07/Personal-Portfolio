@@ -126,7 +126,7 @@ const About: React.FC = () => {
 
               {/* Card 4: Stats Bar */}
               <div className="col-span-2">
-                <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-6 backdrop-blur-xl">
+                <div className="bg-primary/5 border border-primary/10 rounded-[2rem] p-6 backdrop-blur-xl">
                   <div className="flex justify-around items-center">
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">

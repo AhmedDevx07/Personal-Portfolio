@@ -126,8 +126,8 @@ const TechAndJourney: React.FC = () => {
                     {/* Hover Glow Effect */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
-                    <skill.icon className="text-4xl text-primary/80 transition-all duration-500 group-hover:text-primary group-hover:scale-110" />
-                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/60 group-hover:text-white transition-colors">
+                    <skill.icon className="text-4xl text-primary/90 transition-all duration-500 group-hover:text-primary group-hover:scale-110" />
+                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/80 group-hover:text-white transition-colors">
                       {skill.name}
                     </span>
                   </div>

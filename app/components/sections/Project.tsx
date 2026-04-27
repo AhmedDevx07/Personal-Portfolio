@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
             <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tighter">
               Featured <span className="text-primary italic">Projects</span>
             </h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto font-light">
+            <p className="text-lg text-white/60 max-w-2xl mx-auto font-light">
               A curated showcase of high-performance web applications, digital
               products, and experimental prototypes built with a focus on
               scalability and user experience.
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                 className={`group relative px-8 py-3 rounded-2xl font-medium transition-all duration-500 overflow-hidden cursor-pointer ${
                   activeCategory === category
                     ? "text-black"
-                    : "text-white/70 hover:text-primary border border-primary/20"
+                    : "text-white/90 hover:text-primary border border-primary/20"
                 }`}
               >
                 {/* Background Fill for Active State */}
