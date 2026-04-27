@@ -69,16 +69,16 @@ const About: React.FC = () => {
 
               {/* Card 1: Tech Stack (Large) */}
               <div className="col-span-2 group">
-                <div className="bg-white/[0.02] border border-primary/10 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm relative overflow-hidden">
+                <div className="bg-white/[0.02] border border-primary/20 rounded-[2rem] p-8 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm relative overflow-hidden">
                   <div className="flex items-center gap-6 relative z-10">
-                    <div className="p-4 bg-primary/10 rounded-2xl border border-primary/20 group-hover:rotate-6 transition-transform">
-                      <Cpu className="w-8 h-8 text-primary" />
+                    <div className="p-4 bg-primary/5 rounded-2xl border border-primary/10 group-hover:rotate-6 group-hover:border-primary/40 transition-transform">
+                      <Cpu className="w-8 h-8 text-primary " />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">
                         Tech Ecosystem
                       </h3>
-                      <p className="text-sm text-white/50 leading-relaxed">
+                      <p className="text-sm text-white/60 leading-relaxed">
                         Working with the MERN stack and Next.js to build modern,
                         scalable web applications, with a focus on performance,
                         clean architecture, and effective state management.
@@ -90,14 +90,14 @@ const About: React.FC = () => {
 
               {/* Card 2: Aesthetic (Small) */}
               <div className="col-span-1 group">
-                <div className="h-full bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
+                <div className="h-full bg-white/[0.02] border border-primary/20 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
                     <Sparkles className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">
                     Aesthetic Precision
                   </h3>
-                  <p className="text-sm text-white/50 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {" "}
                     Designing clean, modern, and visually appealing user
                     interfaces with a strong focus on usability, consistency,
@@ -108,14 +108,14 @@ const About: React.FC = () => {
 
               {/* Card 3: Performance (Small) */}
               <div className="col-span-1 group">
-                <div className="h-full bg-white/[0.02] border border-primary/10 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
-                  <div className="w-14 h-14 rounded-2xl  bg-primary/10 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
+                <div className="h-full bg-white/[0.02] border border-primary/20 rounded-[2rem] p-6 hover:border-primary/40 transition-all duration-500 backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-2xl  bg-primary/5 border border-primary/10 flex items-center justify-center group-hover:border-primary/40 group-hover:rotate-6 transition-all duration-500 mb-4">
                     <Zap className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-500" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">
                     Performance First
                   </h3>
-                  <p className="text-sm text-white/50 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {" "}
                     Building optimized web applications with efficient
                     rendering, fast load times, and a focus on performance best
@@ -126,31 +126,31 @@ const About: React.FC = () => {
 
               {/* Card 4: Stats Bar */}
               <div className="col-span-2">
-                <div className="bg-primary/5 border border-primary/10 rounded-[2rem] p-6 backdrop-blur-xl">
+                <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-6 backdrop-blur-xl">
                   <div className="flex justify-around items-center">
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         100%
                       </p>
-                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
+                      <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
                         Quality
                       </p>
                     </div>
-                    <div className="w-px h-8 bg-primary/20" />
+                    <div className="w-px h-8 bg-primary/30" />
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         Fast
                       </p>
-                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
+                      <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
                         Response
                       </p>
                     </div>
-                    <div className="w-px h-8 bg-primary/20" />
+                    <div className="w-px h-8 bg-primary/30" />
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
                         24/7
                       </p>
-                      <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-2">
+                      <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
                         Support
                       </p>
                     </div>

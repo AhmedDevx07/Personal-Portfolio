@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
+                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-primary/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
                       placeholder="Your Name"
                     />
                   </div>
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
+                      className="w-full px-4 py-3.5 bg-white/[0.05] border border-primary/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm"
                       placeholder="Your Email"
                     />
                   </div>
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3.5 bg-white/[0.05] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm resize-none"
+                    className="w-full px-4 py-3.5 bg-white/[0.05] border border-primary/10 rounded-xl text-white focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/20 rounded-2xl hover:border-primary/30 transition-all duration-300 group">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
                       <Mail className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
                     <div className="text-left">
@@ -220,7 +220,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-4 p-5 bg-white/[0.02] border border-primary/20 rounded-2xl hover:border-primary/30 transition-all group">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-all">
                       <MapPin className="w-5 h-5 text-primary group-hover:text-black" />
                     </div>
                     <div className="text-left">

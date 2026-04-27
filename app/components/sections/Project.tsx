@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/50 text-xl italic">
+            <p className="text-white/60 text-xl italic">
               No projects found in this category...
             </p>
           </div>

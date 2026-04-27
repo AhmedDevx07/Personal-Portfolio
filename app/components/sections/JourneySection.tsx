@@ -121,13 +121,13 @@ const TechAndJourney: React.FC = () => {
                 {techStack.map((skill, index) => (
                   <div
                     key={index}
-                    className="group relative bg-white/[0.02] border border-primary/10 hover:border-primary/40 rounded-[2rem] p-8 flex flex-col items-center justify-center gap-4 transition-all duration-500 backdrop-blur-sm hover:shadow-[0_0_30px_-10px_rgba(var(--primary-rgb),0.3)]"
+                    className="group relative bg-white/[0.02] border border-primary/20 hover:border-primary/40 rounded-[2rem] p-8 flex flex-col items-center justify-center gap-4 transition-all duration-500 backdrop-blur-sm hover:shadow-[0_0_30px_-10px_rgba(var(--primary-rgb),0.3)]"
                   >
                     {/* Hover Glow Effect */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
                     <skill.icon className="text-4xl text-primary/90 transition-all duration-500 group-hover:text-primary group-hover:scale-110" />
-                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/80 group-hover:text-white transition-colors">
+                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/60 group-hover:text-white transition-colors">
                       {skill.name}
                     </span>
                   </div>
@@ -150,7 +150,7 @@ const TechAndJourney: React.FC = () => {
                       {item.icon}
                     </div>
 
-                    <div className="bg-white/[0.02] border border-primary/10 p-6 rounded-[1.5rem] hover:bg-white/[0.04] hover:border-primary/30 transition-all duration-500">
+                    <div className="bg-white/[0.02] border border-primary/20 p-6 rounded-[1.5rem] hover:bg-white/[0.04] hover:border-primary/30 transition-all duration-500">
                       <div className="flex items-center justify-between mb-3">
                         <span className="px-2 py-0.5 bg-white/5 rounded text-primary font-mono text-[10px] font-bold tracking-widest">
                           {item.year}
@@ -165,7 +165,7 @@ const TechAndJourney: React.FC = () => {
                       <h4 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-white/50 leading-relaxed font-normal">
+                      <p className="text-xs text-white/60 leading-relaxed font-normal">
                         {item.desc}
                       </p>
                     </div>

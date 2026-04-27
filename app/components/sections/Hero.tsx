@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                     <div className="text-2xl md:text-3xl font-bold text-primary font-mono">
                       {stat.value}
                     </div>
-                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest">
+                    <div className="text-[10px] font-bold text-white/60 uppercase tracking-widest">
                       {stat.label}
                     </div>
                   </div>

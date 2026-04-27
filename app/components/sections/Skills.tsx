@@ -79,7 +79,7 @@ const Skills: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
               Technical <span className="text-primary italic">Arsenal</span>
             </h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto font-light">
+            <p className="text-white/60 text-lg max-w-2xl mx-auto font-light">
               Engineered with precision. A curated collection of modern tools I
               use to build scalable digital solutions.
             </p>

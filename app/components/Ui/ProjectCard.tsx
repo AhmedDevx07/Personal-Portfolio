@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 text-[10px] font-bold text-white/60 bg-white/5 border border-white/10 rounded-md group-hover:border-primary/20 group-hover:text-primary transition-all duration-300 uppercase tracking-tighter"
+              className="px-3 py-1 text-[10px] font-bold text-white/60 bg-white/5 border border-primary/10 rounded-md group-hover:border-primary/20 group-hover:text-primary transition-all duration-300 uppercase tracking-tighter"
             >
               {tech}
             </span>
