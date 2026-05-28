@@ -9,6 +9,7 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 import { PERSONAL_INFO, STATS } from "@/app/utils/constants";
 import FadeIn from "../animations/FadeIn";
@@ -45,7 +46,7 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={100}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter mb-6">
-                Crafting <span className="text-primary italic">Scalable</span>{" "}
+                Building <span className="text-primary italic">Scalable</span>{" "}
                 <br />
                 Web Applications
               </h1>
@@ -53,10 +54,10 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={200}>
               <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-6 leading-relaxed">
-                I build modern, high-performance web applications using
-                React.js, Next.js, and Tailwind CSS. Passionate about clean UI,
-                scalability, and continuously growing towards Full-stack MERN
-                development.
+                I build scalable, production-ready web applications using
+                MongoDB, Express.js, React.js, Node.js & Next.js. Focused on
+                clean architecture, seamless user experience, and delivering
+                real-world solutions for clients.
               </p>
             </FadeIn>
 
@@ -119,11 +120,11 @@ const Hero: React.FC = () => {
                   <FadeIn delay={500}>
                     <div className="flex items-center gap-4 bg-black/40 backdrop-blur-md border border-primary/20 rounded-full px-6 py-3">
                       {[
-                        SiReact,
-                        SiNextdotjs,
-                        SiNodedotjs,
-                        SiTailwindcss,
                         SiMongodb,
+                        SiExpress,
+                        SiReact,
+                        SiNodedotjs,
+                        SiNextdotjs,
                       ].map((Icon, i) => (
                         <div
                           key={i}

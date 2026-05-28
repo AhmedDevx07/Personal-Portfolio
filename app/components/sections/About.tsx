@@ -25,16 +25,15 @@ const About: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <Terminal className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
-                  Frontend Developer
+                  MERN STACK DEVELOPER
                 </span>
               </div>
             </FadeIn>
 
             <FadeIn delay={100}>
               <h2 className="text-4xl lg:text-6xl font-bold text-white tracking-tighter leading-[1.1]">
-                Crafting digital{" "}
-                <span className="text-primary italic">experiences</span> that
-                matter.
+                Building <span className="text-primary italic">solutions</span>{" "}
+                that make a difference.
               </h2>
             </FadeIn>
 
@@ -79,9 +78,10 @@ const About: React.FC = () => {
                         Tech Ecosystem
                       </h3>
                       <p className="text-sm text-white/60 leading-relaxed">
-                        Working with the MERN stack and Next.js to build modern,
-                        scalable web applications, with a focus on performance,
-                        clean architecture, and effective state management.
+                        Building full-stack applications with MongoDB,
+                        Express.js, React.js, Node.js, and Next.js — focused on
+                        clean architecture, efficient state management, and
+                        scalable backend systems.
                       </p>
                     </div>
                   </div>
@@ -98,10 +98,9 @@ const About: React.FC = () => {
                     Aesthetic Precision
                   </h3>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    {" "}
-                    Designing clean, modern, and visually appealing user
-                    interfaces with a strong focus on usability, consistency,
-                    and responsive design.
+                    Designing modern, responsive, and user-friendly interfaces
+                    with a strong focus on clean UI, consistency, and seamless
+                    user experience across all devices.
                   </p>
                 </div>
               </div>
@@ -116,10 +115,9 @@ const About: React.FC = () => {
                     Performance First
                   </h3>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    {" "}
-                    Building optimized web applications with efficient
-                    rendering, fast load times, and a focus on performance best
-                    practices in React and Next.js.
+                    Developing optimized web applications with fast load times,
+                    efficient API handling, and performance best practices in
+                    both React and Next.js.
                   </p>
                 </div>
               </div>

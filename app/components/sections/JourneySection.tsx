@@ -32,28 +32,28 @@ const TechAndJourney: React.FC = () => {
   const journeyData: JourneyItem[] = [
     {
       year: "2026",
-      title: "Advanced Full-Stack Architecture",
+      title: "Advanced Full-Stack Development",
       status: "Ongoing",
-      desc: "Building production-ready, SaaS-grade MERN applications with a focus on high-end UI/UX, optimized performance, and scalable state management.",
+      desc: "Actively building production-ready MERN Stack & Next.js projects. Focusing on advanced concepts like authentication, cloud deployment, real-time features, and delivering complete client projects.",
       icon: <Briefcase className="w-4 h-4" />,
     },
     {
       year: "2026",
       title: "Backend Development & APIs",
-      status: "Ongoing",
-      desc: "Deep diving into Node.js, Express, and complex MongoDB schema designs. Engineering secure RESTful APIs and real-time database integrations.",
+
+      desc: "Completed backend development with Node.js, Express.js, and MongoDB. Built secure RESTful APIs, handled authentication with JWT, and designed scalable database schemas within 2-3 months.",
       icon: <Sparkles className="w-4 h-4" />,
     },
     {
       year: "2025",
-      title: "Frontend Development Mastery",
-      desc: "Mastered React.js, Next.js, and Tailwind CSS. Specialized in creating interactive web experiences with Framer Motion.",
+      title: "Full-Stack Training at SMIT",
+      desc: "Enrolled at Saylani Mass IT Training in April 2025 for Full-Stack MERN development. Mastered JavaScript, TypeScript, React.js, Next.js, and Tailwind CSS over 9-10 months, then completed backend in the final phase. Graduated May 2026.",
       icon: <GraduationCap className="w-4 h-4" />,
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Began Coding Journey",
-      desc: "Started with the core fundamentals of the web: HTML5, CSS3, and Modern JavaScript. Developed a passion for building clean, functional user interfaces.",
+      desc: "Started self-learning web development from scratch — HTML5, CSS3, and JavaScript. Built a strong foundation independently before joining formal training, which accelerated the learning process.",
       icon: <Calendar className="w-4 h-4" />,
     },
   ];

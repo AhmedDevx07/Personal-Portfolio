@@ -11,41 +11,41 @@ export const services: Service[] = [
     icon: "Layout",
     title: "Frontend Development",
     description:
-      "Building modern, responsive user interfaces using React.js and Next.js with a focus on clean, maintainable code and scalability.",
+      "Building modern, scalable, and responsive web applications using React.js and Next.js with clean component architecture, reusable code, and seamless user experience.",
   },
   {
     id: 2,
     icon: "Smartphone",
     title: "Responsive Design",
     description:
-      "Creating mobile-first, fully responsive layouts that deliver a consistent experience across all devices and screen sizes.",
+      "Creating pixel-perfect, mobile-first layouts that deliver a consistent and polished experience across all devices and screen sizes using Tailwind CSS.",
   },
   {
     id: 3,
     icon: "Zap",
     title: "Performance Optimization",
     description:
-      "Improving application performance through techniques like code splitting, lazy loading, and efficient rendering in React and Next.js.",
+      "Optimizing web applications for speed and efficiency through code splitting, lazy loading, image optimization, and Next.js best practices for faster load times.",
   },
   {
     id: 4,
     icon: "Database",
-    title: "Full-Stack Learning",
+    title: "Full-Stack Development",
     description:
-      "Currently expanding into backend development with Node.js, Express, and MongoDB to build complete MERN stack applications.",
+      "Delivering complete end-to-end web solutions using the MERN Stack — from database design and REST APIs in Node.js & Express to fully functional React frontends.",
   },
   {
     id: 5,
     icon: "Figma",
     title: "UI/UX to Code",
     description:
-      "Transforming Figma and design concepts into clean, responsive, and user-friendly web interfaces with attention to detail.",
+      "Converting Figma designs and UI concepts into clean, responsive, and pixel-accurate web interfaces with smooth interactions and consistent styling.",
   },
   {
     id: 6,
     icon: "Search",
-    title: "SEO Fundamentals",
+    title: "SEO Optimization",
     description:
-      "Applying basic SEO practices such as semantic HTML, accessibility, and performance optimization to improve visibility.",
+      "Implementing on-page SEO best practices including semantic HTML, Next.js meta tags, SSR/SSG for better indexing, and performance improvements for higher search rankings.",
   },
 ];

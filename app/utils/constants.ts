@@ -26,14 +26,14 @@ export interface NavLink {
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: "Muhammad Ahmed",
-  title: "Frontend Developer",
+  title: "MERN STACK DEVELOPER",
   email: "ahmedoffice69@gmail.com",
   location: "Karachi, Pakistan",
   tagline:
-    "Crafting modern, scalable and user-friendly web applications with React & Next.js.",
+    "Building scalable, production-ready web applications with the MERN stack and Next.js.",
   resume: "MUHAMMAD AHMED RESUME.pdf",
   bio: [
-    "I'm a passionate Frontend Developer currently learning Full Stack MERN development at SMIT. I have built a strong foundation in modern frontend technologies including HTML, CSS, JavaScript, and TypeScript, and I specialize in building responsive and high-performance web applications using React.js and Next.js.",
+    "I'm a MERN Stack & Next.js Developer based in Karachi, Pakistan. I have completed my Full Stack development training at SMIT and specialize in building scalable, production-ready web applications. From responsive frontends to robust REST APIs and database design — I deliver complete end-to-end solutions for clients and businesses.",
   ],
 };
 
@@ -44,10 +44,10 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const STATS: StatItem[] = [
-  { label: "Months of Experience", value: "12+" },
+  { label: "Years of Experience", value: "1+" },
   { label: "Projects Built", value: "30+" },
-  { label: "Technologies Used", value: "10+" },
-  { label: "LinkedIn Network", value: "1.5K+" },
+  { label: "Technologies Used", value: "8+" },
+  { label: "github Repositories", value: "70+" },
 ];
 
 export const NAV_LINKS: NavLink[] = [

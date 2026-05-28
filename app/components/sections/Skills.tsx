@@ -41,8 +41,8 @@ const skillIcons: Record<string, React.ReactNode> = {
 
   "Git & Github": <SiGithub className="w-4 h-4" />,
   Figma: <SiFigma className="w-4 h-4" />,
-  Vite: <SiVite className="w-4 h-4" />,
-  "Responsive Design": <Icons.Smartphone className="w-4 h-4" />,
+  "CI/CD": <Icons.GitMerge className="w-4 h-4" />,
+  Docker: <Icons.Container className="w-4 h-4" />,
 };
 
 const Skills: React.FC = () => {
@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
       "Redux",
     ],
     Backend: ["Node.js", "Express", "MongoDB", "Rest APIs", "Firebase"],
-    Tools: ["Git & Github", "Figma", "Vite", "Responsive Design"],
+    Tools: ["Git & Github", "CI/CD", "Docker", "Figma"],
   };
 
   return (
