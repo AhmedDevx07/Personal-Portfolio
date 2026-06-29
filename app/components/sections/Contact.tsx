@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <FadeIn>
+        <FadeIn delay={0}>
           <div className="text-center mb-12 md:mb-20 px-2">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4 md:mb-6">
               <MessageSquare className="w-3.5 h-3.5 text-primary animate-pulse" />

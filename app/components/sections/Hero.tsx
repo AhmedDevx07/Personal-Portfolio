@@ -2,11 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { ChevronDown, Terminal } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
-  SiTailwindcss,
   SiNodedotjs,
   SiMongodb,
   SiExpress,
@@ -117,7 +116,7 @@ const Hero: React.FC = () => {
 
                 {/* Technology Logos */}
                 <div className="absolute bottom-6 left-6 z-20">
-                  <FadeIn delay={500}>
+                  <FadeIn delay={300}>
                     <div className="flex items-center gap-4 bg-black/40 backdrop-blur-md border border-primary/20 rounded-full px-6 py-3">
                       {[
                         SiMongodb,

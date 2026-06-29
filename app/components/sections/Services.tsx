@@ -28,7 +28,7 @@ const Services: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <FadeIn>
+        <FadeIn delay={0}>
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6 backdrop-blur-sm">
               <Wrench className="w-3.5 h-3.5 text-primary animate-pulse" />

@@ -74,7 +74,7 @@ const Skills: React.FC = () => {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <FadeIn>
+        <FadeIn delay={0}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
               Technical <span className="text-primary italic">Arsenal</span>

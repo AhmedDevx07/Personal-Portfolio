@@ -25,7 +25,7 @@ const About: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <Terminal className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
-                  MERN STACK DEVELOPER
+                  MERN STACK & NEXT.JS DEVELOPER
                 </span>
               </div>
             </FadeIn>
@@ -50,7 +50,7 @@ const About: React.FC = () => {
               </div>
             </FadeIn>
 
-            <FadeIn delay={400}>
+            <FadeIn delay={300}>
               <button
                 className="inline-flex items-center gap-3 bg-primary hover:bg-white text-black rounded-2xl px-10 py-5 text-sm font-bold transition-all duration-500 w-fit group shadow-xl shadow-primary/10 cursor-pointer"
                 onClick={() => window.open(PERSONAL_INFO.resume, "_blank")}
@@ -61,7 +61,7 @@ const About: React.FC = () => {
             </FadeIn>
           </div>
 
-          <FadeIn delay={400}>
+          <FadeIn delay={300}>
             <div className="grid grid-cols-2 gap-4 relative">
               {/* Central Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />

@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const categoryIcons: Record<string, React.ElementType> = {
   All: Target,
   Frontend: Layers,
-  Backend: Database,
+
   "Full Stack": Zap,
 };
 
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <FadeIn>
+        <FadeIn delay={0}>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full mb-6">
               <Briefcase className="w-4 h-4 text-[#8DFF69] animate-pulse" />
