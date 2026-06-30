@@ -12,6 +12,46 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 8, // Apne sequence ke mutabiq ID set kar lijiyega
+    title: "AI-Powered Resume Analyzer",
+    description:
+      "An intelligent MERN-stack intelligence engine featuring Google Gemini AI for structured resume parsing, strict Zod schema validation, and interactive predictive analytics dashboards to optimize ATS scoring.",
+    image: "8.png", // Aap apni image asset ka naam yahan likh sakte hain
+    category: "Full Stack",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Gemini API",
+      "Zod",
+      "Tailwind CSS",
+    ],
+    metrics: "Structured AI Output • HTTPOnly JWT Security",
+    demoUrl: "https://ai-powered-resume-analyzer-pied.vercel.app/",
+    githubUrl: "https://github.com/AhmedDevx07/AI-Powered-Resume-Analyzer",
+  },
+  {
+    id: 7, // Aap apne purane sequence ke mutabiq ID check kar lijiyega
+    title: "Car Rental Booking System",
+    description:
+      "An enterprise-grade fleet management and reservation engine featuring a dual-role dashboard architecture for seamless peer-to-peer vehicle scaling and low-latency booking operations.",
+    image: "7.png", // Aap apni image asset ka naam yahan match kar saktay hain
+    category: "Full Stack",
+    technologies: [
+      "React 19",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Motion",
+    ],
+    metrics: "JWT Secured • CDN Image Edge Storage",
+    demoUrl: "https://car-rental-booking-app-alpha.vercel.app/",
+    githubUrl:
+      "https://github.com/AhmedDevx07/Full-Stack-Car-Rental-Booking-App",
+  },
+  {
     id: 1,
     title: "SkyCast",
     description:
@@ -22,6 +62,47 @@ export const projects: Project[] = [
     metrics: "Real-time Sync • 99% Accuracy",
     demoUrl: "https://next-weather-app-nine.vercel.app/",
     githubUrl: "https://github.com/AhmedDevx07/Next-Weather-App",
+  },
+
+  {
+    id: 9, // Apne sequence ke mutabiq ID maintain kar lijiyega
+    title: "QuickGPT — Full-Stack AI Chatbot",
+    description:
+      "A high-throughput MERN AI conversational agent integrated with Google Gemini via an abstraction-layer wrapper, featuring stateful MongoDB chat persistence and a secure credit-token payment gateway.",
+    image: "10.png", // Aap apna image asset name map kar sakte hain
+    category: "Full Stack",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Gemini API",
+      "OpenAI SDK",
+      "JWT",
+    ],
+    metrics: "Token Monetization • Swappable AI Engine",
+    demoUrl: "https://full-stack-quickgpt.vercel.app/",
+    githubUrl: "https://github.com/AhmedDevx07/Full-Stack-QuickGPT",
+  },
+  {
+    id: 10, // Apne sequence ke mutabiq ID manage kar lijiyega
+    title: "E-MarketX — Multi-Vendor Marketplace",
+    description:
+      "A production-ready Amazon-style multi-tenant e-commerce marketplace powered by a unified Next.js App Router architecture, featuring three role-isolated portals, middleware-enforced RBAC, and Cloudinary media optimization.",
+    image: "9.png", // Aap apni asset ka naam yahan likh sakte hain
+    category: "Full Stack",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "MongoDB",
+      "Cloudinary",
+      "Tailwind CSS",
+      "JWT",
+    ],
+    metrics: "Multi-Tenant RBAC • Cloudinary Edge Media",
+    demoUrl: "https://full-stack-multi-vendor-e-com.vercel.app/",
+    githubUrl:
+      "https://github.com/AhmedDevx07/Full-Stack-Multi-Vendor-E-Commerce",
   },
   {
     id: 2,
@@ -34,54 +115,6 @@ export const projects: Project[] = [
     metrics: "Secure Auth • 100% Persistence",
     demoUrl: "https://preeminent-arithmetic-3a737b.netlify.app/auth",
     githubUrl: "https://github.com/AhmedDevx07/React-Tasks-Dashboard",
-  },
-  {
-    id: 3,
-    title: "SNEAKX",
-    description:
-      "An enterprise-level E-Commerce management suite with advanced multi-filtering logic, real-time inventory tracking, and interactive sales analytics.",
-    image: "3.png",
-    category: "Frontend",
-    technologies: ["React.js", "Context API", "Tailwind CSS", "React Router"],
-    metrics: "Dynamic Filtering • Scale-Ready",
-    demoUrl: "https://react-e-commerce-dashboard-eight.vercel.app/",
-    githubUrl: "https://github.com/AhmedDevx07/React-E-Commerce-Dashboard",
-  },
-  {
-    id: 4,
-    title: "ProTodo",
-    description:
-      "A streamlined real-time task engine built with a focus on low-latency data updates and efficient state handling for daily operations.",
-    image: "4.png",
-    category: "Full Stack",
-    technologies: ["JavaScript", "Firebase", "Bootstrap", "HTML5"],
-    metrics: "Instant Updates • No-SQL Data",
-    demoUrl: "https://splendid-scone-5ec404.netlify.app/",
-    githubUrl: "https://github.com/AhmedDevx07/Firebase-FullStack-TodoApp",
-  },
-  {
-    id: 5,
-    title: "GitIntel",
-    description:
-      "A deep-dive GitHub analytics tool that visualizes repository health, user contributions, and profile metrics via the GitHub REST API.",
-    image: "5.png",
-    category: "Frontend",
-    technologies: ["JavaScript", "GitHub API", "Bootstrap", "CSS3"],
-    metrics: "100+ Data Points • API Driven",
-    demoUrl: "https://ahmeddevx07.github.io/GitHub-User-Analytics/",
-    githubUrl: "https://github.com/AhmedDevx07/GitHub-User-Analytics",
-  },
-  {
-    id: 6,
-    title: "ModernShop UI",
-    description:
-      "A lightweight e-commerce storefront prototype designed for rapid API prototyping and seamless frontend-to-backend integration testing.",
-    image: "6.png",
-    category: "Frontend",
-    technologies: ["JavaScript", "REST API", "Bootstrap", "HTML5"],
-    metrics: "Modular UI • Rapid Prototype",
-    demoUrl: "https://ahmeddevx07.github.io/E-Com-Fake-Product-API/",
-    githubUrl: "https://github.com/AhmedDevx07/E-Com-Fake-Product-API",
   },
 ];
 

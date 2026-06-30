@@ -1,26 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { projects, categories } from "@/app/data/project";
-import { Briefcase, Target, Globe, Database, Layers, Zap } from "lucide-react";
+import { projects } from "@/app/data/project";
+import { Briefcase } from "lucide-react";
 import ProjectCard from "../Ui/ProjectCard";
 import FadeIn from "../animations/FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categoryIcons: Record<string, React.ElementType> = {
-  All: Target,
-  Frontend: Layers,
-
-  "Full Stack": Zap,
-};
-
 const Projects: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
+  const filteredProjects = projects;
 
   return (
     <section id="projects" className="relative py-24 overflow-hidden">
@@ -50,41 +37,6 @@ const Projects: React.FC = () => {
               products, and experimental prototypes built with a focus on
               scalability and user experience.
             </p>
-          </div>
-        </FadeIn>
-
-        {/* Filter Categories */}
-        <FadeIn delay={50}>
-          <div className="flex flex-wrap justify-center gap-4 mb-20">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`group relative px-8 py-3 rounded-2xl font-medium transition-all duration-500 overflow-hidden cursor-pointer ${
-                  activeCategory === category
-                    ? "text-black"
-                    : "text-white/90 hover:text-primary border border-primary/20"
-                }`}
-              >
-                {/* Background Fill for Active State */}
-                {activeCategory === category && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-primary"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-
-                <div className="relative flex items-center gap-2 z-10">
-                  {React.createElement(categoryIcons[category] || Globe, {
-                    className: "w-4 h-4",
-                  })}
-                  <span className="text-sm font-bold tracking-tight">
-                    {category}
-                  </span>
-                </div>
-              </button>
-            ))}
           </div>
         </FadeIn>
 
