@@ -12,7 +12,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 8, // Apne sequence ke mutabiq ID set kar lijiyega
+    id: 1,
+    title: "MaintainIQ — AI-Powered QR Maintenance Platform",
+    description:
+      "An AI-assisted full-stack asset maintenance system built around QR codes, featuring OpenAI-powered issue triage, a backend-enforced state machine for status transitions, and role-based dashboards with a complete auditable asset history.",
+    image: "12.png",
+    category: "Full Stack",
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Gemini API",
+      "Tailwind CSS",
+    ],
+    metrics: "AI Issue Triage • Enforced State Machine",
+    demoUrl: "https://smit-final-hackathon-gamma.vercel.app/login",
+    githubUrl: "https://github.com/AhmedDevx07/SMIT-Final-Hackathon",
+  },
+  {
+    id: 2, // Apne sequence ke mutabiq ID set kar lijiyega
     title: "AI-Powered Resume Analyzer",
     description:
       "An intelligent MERN-stack intelligence engine featuring Google Gemini AI for structured resume parsing, strict Zod schema validation, and interactive predictive analytics dashboards to optimize ATS scoring.",
@@ -32,7 +52,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/AhmedDevx07/AI-Powered-Resume-Analyzer",
   },
   {
-    id: 7, // Aap apne purane sequence ke mutabiq ID check kar lijiyega
+    id: 3, // Aap apne purane sequence ke mutabiq ID check kar lijiyega
     title: "Car Rental Booking System",
     description:
       "An enterprise-grade fleet management and reservation engine featuring a dual-role dashboard architecture for seamless peer-to-peer vehicle scaling and low-latency booking operations.",
@@ -52,7 +72,7 @@ export const projects: Project[] = [
       "https://github.com/AhmedDevx07/Full-Stack-Car-Rental-Booking-App",
   },
   {
-    id: 1,
+    id: 4,
     title: "SkyCast",
     description:
       "A high-performance weather intelligence dashboard featuring real-time data synchronization, location-aware forecasts, and dynamic visual state management.",
@@ -65,7 +85,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 9, // Apne sequence ke mutabiq ID maintain kar lijiyega
+    id: 5, // Apne sequence ke mutabiq ID maintain kar lijiyega
     title: "QuickGPT — Full-Stack AI Chatbot",
     description:
       "A high-throughput MERN AI conversational agent integrated with Google Gemini via an abstraction-layer wrapper, featuring stateful MongoDB chat persistence and a secure credit-token payment gateway.",
@@ -85,7 +105,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/AhmedDevx07/Full-Stack-QuickGPT",
   },
   {
-    id: 10, // Apne sequence ke mutabiq ID manage kar lijiyega
+    id: 6, // Apne sequence ke mutabiq ID manage kar lijiyega
     title: "E-MarketX — Multi-Vendor Marketplace",
     description:
       "A production-ready Amazon-style multi-tenant e-commerce marketplace powered by a unified Next.js App Router architecture, featuring three role-isolated portals, middleware-enforced RBAC, and Cloudinary media optimization.",
@@ -103,18 +123,6 @@ export const projects: Project[] = [
     demoUrl: "https://full-stack-multi-vendor-e-com.vercel.app/",
     githubUrl:
       "https://github.com/AhmedDevx07/Full-Stack-Multi-Vendor-E-Commerce",
-  },
-  {
-    id: 2,
-    title: "CodeLab",
-    description:
-      "A modular productivity ecosystem for developers, featuring secure authentication, persistent task architecture, and an intuitive Bento-grid management system.",
-    image: "2.png",
-    category: "Frontend",
-    technologies: ["React.js", "Context API", "Firebase", "Tailwind CSS"],
-    metrics: "Secure Auth • 100% Persistence",
-    demoUrl: "https://preeminent-arithmetic-3a737b.netlify.app/auth",
-    githubUrl: "https://github.com/AhmedDevx07/React-Tasks-Dashboard",
   },
 ];
 
