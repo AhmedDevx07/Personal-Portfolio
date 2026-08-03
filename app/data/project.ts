@@ -52,40 +52,27 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/AhmedDevx07/AI-Powered-Resume-Analyzer",
   },
   {
-    id: 3, // Aap apne purane sequence ke mutabiq ID check kar lijiyega
-    title: "Car Rental Booking System",
+    id: 3, // Apne sequence ke mutabiq ID manage kar lijiyega
+    title: "Nexus — Multi-Vendor Marketplace",
     description:
-      "An enterprise-grade fleet management and reservation engine featuring a dual-role dashboard architecture for seamless peer-to-peer vehicle scaling and low-latency booking operations.",
-    image: "7.png", // Aap apni image asset ka naam yahan match kar saktay hain
+      "A production-ready Amazon-style multi-tenant e-commerce marketplace powered by a unified Next.js App Router architecture, featuring three role-isolated portals, middleware-enforced RBAC, and Cloudinary media optimization.",
+    image: "2.png", // Aap apni asset ka naam yahan likh sakte hain
     category: "Full Stack",
     technologies: [
-      "React 19",
-      "Node.js",
-      "Express.js",
+      "Next.js",
+      "React.js",
       "MongoDB",
+      "Cloudinary",
       "Tailwind CSS",
-      "Motion",
+      "JWT",
     ],
-    metrics: "JWT Secured • CDN Image Edge Storage",
-    demoUrl: "https://car-rental-booking-app-alpha.vercel.app/",
+    metrics: "Multi-Tenant RBAC • Cloudinary Edge Media",
+    demoUrl: "https://full-stack-multi-vendor-e-com.vercel.app/",
     githubUrl:
-      "https://github.com/AhmedDevx07/Full-Stack-Car-Rental-Booking-App",
+      "https://github.com/AhmedDevx07/Full-Stack-Multi-Vendor-E-Commerce",
   },
   {
-    id: 4,
-    title: "SkyCast",
-    description:
-      "A high-performance weather intelligence dashboard featuring real-time data synchronization, location-aware forecasts, and dynamic visual state management.",
-    image: "1.png",
-    category: "Frontend",
-    technologies: ["Next.js", "TypeScript", "OpenWeather API", "Tailwind CSS"],
-    metrics: "Real-time Sync • 99% Accuracy",
-    demoUrl: "https://next-weather-app-nine.vercel.app/",
-    githubUrl: "https://github.com/AhmedDevx07/Next-Weather-App",
-  },
-
-  {
-    id: 5, // Apne sequence ke mutabiq ID maintain kar lijiyega
+    id: 4, // Apne sequence ke mutabiq ID maintain kar lijiyega
     title: "QuickGPT — Full-Stack AI Chatbot",
     description:
       "A high-throughput MERN AI conversational agent integrated with Google Gemini via an abstraction-layer wrapper, featuring stateful MongoDB chat persistence and a secure credit-token payment gateway.",
@@ -105,24 +92,36 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/AhmedDevx07/Full-Stack-QuickGPT",
   },
   {
-    id: 6, // Apne sequence ke mutabiq ID manage kar lijiyega
-    title: "E-MarketX — Multi-Vendor Marketplace",
+    id: 5,
+    title: "SkyCast",
     description:
-      "A production-ready Amazon-style multi-tenant e-commerce marketplace powered by a unified Next.js App Router architecture, featuring three role-isolated portals, middleware-enforced RBAC, and Cloudinary media optimization.",
-    image: "9.png", // Aap apni asset ka naam yahan likh sakte hain
+      "A high-performance weather intelligence dashboard featuring real-time data synchronization, location-aware forecasts, and dynamic visual state management.",
+    image: "1.png",
+    category: "Frontend",
+    technologies: ["Next.js", "TypeScript", "OpenWeather API", "Tailwind CSS"],
+    metrics: "Real-time Sync • 99% Accuracy",
+    demoUrl: "https://next-weather-app-nine.vercel.app/",
+    githubUrl: "https://github.com/AhmedDevx07/Next-Weather-App",
+  },
+  {
+    id: 6, // Aap apne purane sequence ke mutabiq ID check kar lijiyega
+    title: "Car Rental Booking System",
+    description:
+      "An enterprise-grade fleet management and reservation engine featuring a dual-role dashboard architecture for seamless peer-to-peer vehicle scaling and low-latency booking operations.",
+    image: "7.png", // Aap apni image asset ka naam yahan match kar saktay hain
     category: "Full Stack",
     technologies: [
-      "Next.js",
-      "React.js",
+      "React 19",
+      "Node.js",
+      "Express.js",
       "MongoDB",
-      "Cloudinary",
       "Tailwind CSS",
-      "JWT",
+      "Motion",
     ],
-    metrics: "Multi-Tenant RBAC • Cloudinary Edge Media",
-    demoUrl: "https://full-stack-multi-vendor-e-com.vercel.app/",
+    metrics: "JWT Secured • CDN Image Edge Storage",
+    demoUrl: "https://car-rental-booking-app-alpha.vercel.app/",
     githubUrl:
-      "https://github.com/AhmedDevx07/Full-Stack-Multi-Vendor-E-Commerce",
+      "https://github.com/AhmedDevx07/Full-Stack-Car-Rental-Booking-App",
   },
 ];
 
