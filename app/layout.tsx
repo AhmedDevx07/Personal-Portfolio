@@ -5,9 +5,22 @@ import Footer from "@/app/components/layout/Footer";
 import { HeroBackground } from "@/app/components/backgrounds/BackGround";
 
 export const metadata: Metadata = {
-  title: "Ahmeddevx07",
-  description:
-    "Creating Scalable Web Solutions with modern MERN stack technologies.",
+  title: "Ahmeddevx07 | Full Stack Developer",
+  description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
+  keywords: ["MERN", "Full Stack Developer", "Next.js", "React", "Portfolio"],
+  authors: [{ name: "Muhammad Ahmed" }],
+  openGraph: {
+    title: "Ahmeddevx07 | Full Stack Developer",
+    description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
+    url: "https://your-portfolio-url.com",
+    siteName: "Ahmeddevx07 Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ahmeddevx07 | Full Stack Developer",
+    description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
+  },
 };
 
 export default function RootLayout({

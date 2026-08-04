@@ -17,7 +17,6 @@ import {
   SiBootstrap,
   SiRedux,
   SiFigma,
-  SiVite,
   SiGithub,
 } from "react-icons/si";
 import FadeIn from "../animations/FadeIn";

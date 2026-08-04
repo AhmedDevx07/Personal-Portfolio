@@ -2,6 +2,7 @@
 
 import { ExternalLink, Code, TrendingUp } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 export interface Project {
   id: number | string;
@@ -35,10 +36,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className="group relative bg-white/[0.03] backdrop-blur-sm border border-primary/10 rounded-[2.5rem] overflow-hidden hover:border-primary/40 transition-all duration-500 hover:-translate-y-2">
       {/* Image Section */}
       <div className="relative h-56 overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-fit transition-transform duration-1000 group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-1000 group-hover:scale-105"
         />
 
         {/* Static Overlay Gradient */}

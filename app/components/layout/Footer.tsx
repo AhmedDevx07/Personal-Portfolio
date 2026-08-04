@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 Connect
               </h4>
               <p className="text-white/60 text-sm mb-8 leading-relaxed max-w-[240px] md:max-w-none">
-                Let's bridge the gap between your ideas and digital reality.
+                Let&apos;s bridge the gap between your ideas and digital reality.
               </p>
               <div className="flex gap-3">
                 {Object.entries(SOCIAL_LINKS)
@@ -109,6 +109,7 @@ const Footer: React.FC = () => {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Visit my ${platform} profile`}
                         className="w-12 h-12 flex items-center justify-center bg-white/[0.03] border border-primary/10 rounded-xl hover:bg-primary hover:border-primary transition-all duration-500 group"
                       >
                         <Icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />

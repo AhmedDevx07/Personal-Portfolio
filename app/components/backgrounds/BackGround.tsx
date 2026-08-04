@@ -5,9 +5,18 @@ import { motion } from "framer-motion";
 
 export const HeroBackground: React.FC = () => {
   const [mounted, setMounted] = useState(false);
+  const [particles, setParticles] = useState<any[]>([]);
 
   useEffect(() => {
     setMounted(true);
+    setParticles(
+      [...Array(60)].map(() => ({
+        randomLeft: Math.random() * 100,
+        randomTop: Math.random() * 100,
+        randomSize: Math.random() * 5 + 1,
+        randomDuration: Math.random() * 10 + 5,
+      }))
+    );
   }, []);
 
   if (!mounted) return <div className="absolute inset-0 -z-10 bg-black" />;
@@ -27,21 +36,16 @@ export const HeroBackground: React.FC = () => {
       />
 
       {/* 3. Particles with Client-Side Randomization */}
-      {[...Array(60)].map((_, i) => {
-        const randomLeft = Math.random() * 100;
-        const randomTop = Math.random() * 100;
-        const randomSize = Math.random() * 5 + 1;
-        const randomDuration = Math.random() * 10 + 5;
-
+      {particles.map((particle, i) => {
         return (
           <motion.div
             key={i}
             className="absolute rounded-full bg-[#bdff69]"
             style={{
-              width: `${randomSize}px`,
-              height: `${randomSize}px`,
-              left: `${randomLeft}%`,
-              top: `${randomTop}%`,
+              width: `${particle.randomSize}px`,
+              height: `${particle.randomSize}px`,
+              left: `${particle.randomLeft}%`,
+              top: `${particle.randomTop}%`,
             }}
             animate={{
               y: [0, -40, 0],
@@ -49,7 +53,7 @@ export const HeroBackground: React.FC = () => {
               scale: [1, 1.3, 1],
             }}
             transition={{
-              duration: randomDuration,
+              duration: particle.randomDuration,
               repeat: Infinity,
               ease: "easeInOut",
             }}

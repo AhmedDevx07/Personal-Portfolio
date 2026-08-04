@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/app/utils/constants";
 import FadeIn from "../animations/FadeIn";
 import emailjs from "@emailjs/browser";
+import { IconType } from "react-icons";
 
 interface FormData {
   name: string;
@@ -85,7 +86,7 @@ const Contact: React.FC = () => {
     setTimeout(() => setStatus({ type: "", message: "" }), 5000);
   };
 
-  const socialIcons: Record<string, any> = {
+  const socialIcons: Record<string, IconType> = {
     github: FaGithub,
     linkedin: FaLinkedin,
     instagram: FaInstagram,
@@ -112,7 +113,7 @@ const Contact: React.FC = () => {
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 tracking-tighter leading-tight">
-              Let's build something{" "}
+              Let&apos;s build something{" "}
               <span className="text-primary italic">great together.</span>
             </h2>
           </div>
@@ -200,7 +201,7 @@ const Contact: React.FC = () => {
                     Based in Karachi, Pakistan, but working with clients
                     globally. Whether you have a specific project in mind or
                     just want to bridge the gap between an idea and a digital
-                    reality—let's connect and make it happen.
+                    reality&mdash;let&apos;s connect and make it happen.
                   </p>
                 </div>
 
@@ -249,6 +250,7 @@ const Contact: React.FC = () => {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`Visit my ${platform} profile`}
                             className="w-12 h-12 flex items-center justify-center bg-white/[0.03] border border-primary/20 rounded-xl hover:bg-primary hover:border-primary duration-300 transition-all group"
                           >
                             <Icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />
