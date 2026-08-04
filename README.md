@@ -13,23 +13,7 @@
 [Live Demo](https://ahmeddevx07.vercel.app/) · [Report Bug](https://github.com/AhmedDevx07/Personal-Portfolio/issues) · [Request Feature](https://github.com/AhmedDevx07/Personal-Portfolio/issues)
 
 </div>
-
----
-
-## 📋 Table of Contents
-- [About](#-about)
-- [Key Features](#-key-features)
-- [Tech Stack](#️-tech-stack)
-- [Projects Featured](#-projects-featured)
-- [Folder Structure](#-folder-structure)
-- [Getting Started](#️-getting-started)
-- [Environment Variables](#-environment-variables)
-- [Deployment](#-deployment)
-- [Let's Connect](#-lets-connect)
-- [License](#-license)
-
----
-
+ 
 ## 📖 About
 
 This repository contains the source code for my personal portfolio website, built to showcase my projects, skills, and professional journey as a **Full Stack Developer** specializing in the **MERN stack** and modern **React ecosystem**.
@@ -77,9 +61,7 @@ The portfolio dynamically displays several enterprise-grade and full-stack appli
 | 4 | **Car Rental Booking System** | Enterprise fleet management |
 | 5 | **SkyCast** | Real-time weather intelligence dashboard |
 | 6 | **QuickGPT** | Full-Stack AI Chatbot with token monetization |
-
-> 💡 Add live/repo links for each project here once available, so recruiters can explore them directly.
-
+ 
 ---
 
 ## 📁 Folder Structure
@@ -97,62 +79,6 @@ Personal-Portfolio/
 └── README.md
 ```
 
-> ⚠️ Update this to match your actual project structure if it differs.
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) (v18+) installed on your machine.
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AhmedDevx07/Personal-Portfolio.git
-   cd Personal-Portfolio
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Set up environment variables (see [below](#-environment-variables)).
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
----
-
-## 🔑 Environment Variables
-
-To run the contact form (EmailJS) locally, create a `.env.local` file in the root directory and add:
-
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-> Get these values from your [EmailJS Dashboard](https://dashboard.emailjs.com/admin).
-
----
-
-## 🚀 Deployment
-
-This project is deployed on **Vercel**. To deploy your own version:
-
-1. Push your code to GitHub.
-2. Import the repository on [Vercel](https://vercel.com/new).
-3. Add the environment variables listed above in the Vercel project settings.
-4. Deploy 🎉
-
 ---
 
 ## 🤝 Let's Connect
@@ -161,8 +87,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 - 🌐 **Portfolio**: [ahmeddevx07.vercel.app](https://ahmeddevx07.vercel.app/)
 - 💻 **GitHub**: [@AhmedDevx07](https://github.com/AhmedDevx07)
-- 💼 **LinkedIn**: [Add your LinkedIn URL here]
-
+ 
 ---
 
 <div align="center">
