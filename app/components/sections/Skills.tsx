@@ -18,7 +18,13 @@ import {
   SiRedux,
   SiFigma,
   SiGithub,
+  SiPostman,
+  SiGooglegemini,
+  SiMui,
+  SiStyledcomponents,
+   
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import FadeIn from "../animations/FadeIn";
 
 const skillIcons: Record<string, React.ReactNode> = {
@@ -31,6 +37,9 @@ const skillIcons: Record<string, React.ReactNode> = {
   "React.js": <SiReact className="w-4 h-4" />,
   "Next.js": <SiNextdotjs className="w-4 h-4" />,
   Redux: <SiRedux className="w-4 h-4" />,
+  "Context API": <Icons.GitBranch className="w-4 h-4" />,
+  "Material UI": <SiMui className="w-4 h-4" />,
+  "Styled Components": <SiStyledcomponents className="w-4 h-4" />,
 
   "Node.js": <SiNodedotjs className="w-4 h-4" />,
   Express: <SiExpress className="w-4 h-4" />,
@@ -42,6 +51,12 @@ const skillIcons: Record<string, React.ReactNode> = {
   Figma: <SiFigma className="w-4 h-4" />,
   "CI/CD": <Icons.GitMerge className="w-4 h-4" />,
   Docker: <Icons.Container className="w-4 h-4" />,
+
+  AWS: <FaAws className="w-4 h-4" />,
+
+  "Google Gemini API": <SiGooglegemini className="w-4 h-4" />,
+  "JWT Auth": <Icons.ShieldCheck className="w-4 h-4" />,
+  Postman: <SiPostman className="w-4 h-4" />,
 };
 
 const Skills: React.FC = () => {
@@ -56,9 +71,20 @@ const Skills: React.FC = () => {
       "React.js",
       "Next.js",
       "Redux",
+      "Context API",
+      "Material UI",
+      "Styled Components",
     ],
-    Backend: ["Node.js", "Express", "MongoDB", "Rest APIs", "Firebase"],
-    Tools: ["Git & Github", "CI/CD", "Docker", "Figma"],
+    Backend: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+      "Firebase",
+      "JWT Auth",
+      "Google Gemini API",
+    ],
+    Tools: ["Git & Github", "CI/CD", "Docker", "Figma", "Postman", "AWS"],
   };
 
   return (
@@ -161,7 +187,7 @@ const Skills: React.FC = () => {
           {/* Design & Workflow - Sleek Bar */}
           <div className="md:col-span-12">
             <FadeIn delay={300}>
-              <div className="bg-white/[0.02] border border-primary/20 rounded-[2.5rem] p-8 flex flex-col md:flex-row items-center justify-between gap-10 hover:border-primary/40 transition-all duration-500">
+              <div className="bg-white/[0.02] border border-primary/20 rounded-[2.5rem] p-8 flex flex-col md:flex-row items-center justify-between gap-10 hover:border-primary/40 transition-all duration-500 h-full">
                 <div className="min-w-fit">
                   <h3 className="text-xl font-bold text-white">
                     Design & Workflow
