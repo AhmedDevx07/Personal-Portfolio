@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
                 I build scalable, production-ready web applications using
                 MongoDB, Express.js, React.js, Node.js & Next.js. Focused on
                 clean architecture, seamless user experience, and delivering
-                real-world solutions for clients.
+                real-world solutions.
               </p>
             </FadeIn>
 
