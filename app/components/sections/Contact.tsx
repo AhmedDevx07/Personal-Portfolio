@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                     Available for new opportunities
                   </h3>
                   <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
-                    Based in Karachi, Pakistan, but working with clients
+                    Based in Karachi, Pakistan, and open to working with clients
                     globally. Whether you have a specific project in mind or
                     just want to bridge the gap between an idea and a digital
                     reality&mdash;let&apos;s connect and make it happen.

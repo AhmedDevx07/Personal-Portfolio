@@ -27,7 +27,7 @@ export interface NavLink {
 export const PERSONAL_INFO: PersonalInfo = {
   name: "Muhammad Ahmed",
   title: " FULL STACK DEVELOPER",
-  email: "ahmeddevx07@gmail.com",
+  email: "ahmedoffice69@gmail.com",
   location: "Karachi, Pakistan",
   tagline:
     "Building scalable, production-ready web applications with the MERN stack and Next.js.",
