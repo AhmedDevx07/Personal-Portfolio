@@ -10,8 +10,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://ahmeddevx07.vercel.app/) · [Report Bug](https://github.com/AhmedDevx07/Personal-Portfolio/issues) · [Request Feature](https://github.com/AhmedDevx07/Personal-Portfolio/issues)
-
 </div>
  
 ## 📖 About
