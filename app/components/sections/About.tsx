@@ -25,7 +25,7 @@ const About: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full w-fit mx-auto lg:mx-0">
                 <Terminal className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-[10px] font-bold text-primary uppercase tracking-[2px]">
-                  MERN STACK & NEXT.JS DEVELOPER
+                  FULL STACK DEVELOPER
                 </span>
               </div>
             </FadeIn>
@@ -128,28 +128,28 @@ const About: React.FC = () => {
                   <div className="flex justify-around items-center">
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
-                        100%
+                         30+
                       </p>
                       <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
-                        Quality
+                        Projects Built
                       </p>
                     </div>
                     <div className="w-px h-8 bg-primary/30" />
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
-                        Fast
+                        MERN
                       </p>
                       <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
-                        Response
+                        Core Stack
                       </p>
                     </div>
                     <div className="w-px h-8 bg-primary/30" />
                     <div className="text-center">
                       <p className="text-2xl font-black text-primary italic leading-none">
-                        24/7
+                      Clean
                       </p>
                       <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mt-2">
-                        Support
+                        Code Practices
                       </p>
                     </div>
                   </div>
