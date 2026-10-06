@@ -79,17 +79,13 @@ Personal-Portfolio/
 
 ---
 
-## 🤝 Let's Connect
+ ## 👨‍💻 Author
 
-I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-
-- 🌐 **Portfolio**: [ahmeddevx07.vercel.app](https://ahmeddevx07.vercel.app/)
-- 💻 **GitHub**: [@AhmedDevx07](https://github.com/AhmedDevx07)
+**Muhammad Ahmed (AhmedDevx07)**  
  
----
+### 🌐 Connect With Me
 
-<div align="center">
-
-**Built with ❤️ in Karachi, Pakistan by [Muhammad Ahmed](https://github.com/AhmedDevx07)**
-
-</div>
+* 🐙 GitHub: https://github.com/AhmedDevx07  
+* 💼 LinkedIn: https://linkedin.com/in/ahmeddevx07  
+* 🌐 Portfolio: https://ahmeddevx07.vercel.app/
+ 
