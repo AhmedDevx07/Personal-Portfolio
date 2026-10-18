@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={100}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter mb-6">
-                Building <span className="text-primary italic">Scalable</span>{" "}
+                Building <span className="text-primary italic">Modern</span>{" "}
                 <br />
                 Web Applications
               </h1>
@@ -53,10 +53,9 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={200}>
               <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-6 leading-relaxed">
-                I build scalable, production-ready web applications using
-                MongoDB, Express.js, React.js, Node.js & Next.js. Focused on
-                clean architecture, seamless user experience, and delivering
-                real-world solutions.
+                I build full-stack web applications using React, Next.js,
+                Node.js, and MongoDB. I focus on responsive user interfaces,
+                REST APIs, secure authentication, and AI-powered features.
               </p>
             </FadeIn>
 
