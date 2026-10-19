@@ -5,21 +5,34 @@ import Footer from "@/app/components/layout/Footer";
 import { HeroBackground } from "@/app/components/backgrounds/BackGround";
 
 export const metadata: Metadata = {
-  title: "Ahmeddevx07 | Full Stack Developer",
-  description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
-  keywords: ["MERN", "Full Stack Developer", "Next.js", "React", "Portfolio"],
+  title: "Muhammad Ahmed | Full Stack MERN & Next.js Developer",
+  description:
+    "MERN Stack & Next.js Developer based in Karachi, Pakistan. Building scalable, production-ready web applications with modern architecture.",
+  keywords: [
+    "Muhammad Ahmed",
+    "Ahmeddevx07",
+    "MERN Stack Developer",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "React.js",
+    "Node.js",
+    "Karachi",
+    "Pakistan",
+  ],
   authors: [{ name: "Muhammad Ahmed" }],
   openGraph: {
-    title: "Ahmeddevx07 | Full Stack Developer",
-    description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
-    url: "https://your-portfolio-url.com",
-    siteName: "Ahmeddevx07 Portfolio",
+    title: "Muhammad Ahmed | Full Stack MERN & Next.js Developer",
+    description:
+      "Creating Scalable Web Solutions with modern MERN stack and Next.js.",
+    url: "https://ahmeddevx07.vercel.app",
+    siteName: "Muhammad Ahmed Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahmeddevx07 | Full Stack Developer",
-    description: "Creating Scalable Web Solutions with modern MERN stack technologies.",
+    title: "Muhammad Ahmed | Full Stack MERN & Next.js Developer",
+    description:
+      "Creating Scalable Web Solutions with modern MERN stack and Next.js.",
   },
 };
 
