@@ -1,183 +1,197 @@
-// "use client";
+"use client";
 
-// import React from "react";
-// import { Briefcase, Calendar, GraduationCap, Sparkles } from "lucide-react";
-// import FadeIn from "../animations/FadeIn";
-// import {
-//   SiReact,
-//   SiNextdotjs,
-//   SiTypescript,
-//   SiTailwindcss,
-//   SiJavascript,
-//   SiFirebase,
-//   SiNodedotjs,
-//   SiExpress,
-//   SiMongodb,
-// } from "react-icons/si";
+import React from "react";
+import {
+  Briefcase,
+  Calendar,
+  GraduationCap,
+  Sparkles,
+  CheckCircle2,
+  ArrowUpRight,
+} from "lucide-react";
+import FadeIn from "../animations/FadeIn";
 
-// interface JourneyItem {
-//   year: string;
-//   title: string;
-//   status?: string;
-//   desc: string;
-//   icon: React.ReactNode;
-// }
+interface Milestone {
+  period: string;
+  role: string;
+  organization: string;
+  type: "Experience" | "Education" | "Foundation";
+  status?: string;
+  isCurrent?: boolean;
+  desc: string;
+  highlights: string[];
+  icon: React.ReactNode;
+}
 
-// interface TechItem {
-//   name: string;
-//   icon: React.ElementType;
-// }
+const milestones: Milestone[] = [
+  {
+    period: "April 2026 — June 2026",
+    role: "React.js Developer Intern",
+    organization: "Internee.pk",
+    type: "Experience",
+    status: "Internship Completed",
+    desc: "Worked on six web projects, including an AI-powered Resume Analyzer, a full-stack AI Chatbot using the Google Gemini API, a multi-vendor e-commerce platform, and other web applications.",
+    highlights: [
+      "Worked on six projects during the internship.",
+      "Integrated AI features and APIs into web applications.",
+      "Developed responsive interfaces using React.js and modern frontend tools.",
+    ],
+    icon: <Sparkles className="w-4 h-4" />,
+  },
+  {
+    period: "April 2025 — June 2026",
+    role: "Full-Stack Development Trainee",
+    organization: "Saylani Mass IT Training (SMIT)",
+    type: "Education",
+    status: "Completed",
+    desc: "Completed full-stack web development training covering JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, and MongoDB.",
+    highlights: [
+      "Built frontend and full-stack web projects.",
+      "Practiced REST API development and JWT authentication.",
+      "Worked with database modeling and modern web technologies.",
+    ],
+    icon: <GraduationCap className="w-4 h-4" />,
+  },
+  {
+    period: "Early 2025",
+    role: "Frontend Development & JavaScript Foundations",
+    organization: "Self-Directed Learning",
+    type: "Foundation",
+    status: "Learning Foundations",
+    desc: "Started learning web development with HTML, CSS, and JavaScript, building a foundation in responsive design, DOM manipulation, and modern JavaScript concepts.",
+    highlights: [
+      "Built responsive web interfaces.",
+      "Practiced JavaScript fundamentals and DOM manipulation.",
+      "Progressed from frontend basics to full-stack development.",
+    ],
+    icon: <Calendar className="w-4 h-4" />,
+  },
+];
 
-// const TechAndJourney: React.FC = () => {
-//   const journeyData: JourneyItem[] = [
-//     {
-//       year: "2026",
-//       title: "Advanced Full-Stack Development",
-//       status: "Ongoing",
-//       desc: "Actively building production-ready MERN Stack & Next.js projects. Focusing on advanced concepts like authentication, cloud deployment, real-time features, and delivering complete client projects.",
-//       icon: <Briefcase className="w-4 h-4" />,
-//     },
-//     {
-//       year: "2026",
-//       title: "Backend Development & APIs",
+const JourneySection: React.FC = () => {
+  return (
+    <section id="journey" className="relative py-28 overflow-hidden">
+      {/* Background Grid Pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)`,
+          backgroundSize: "44px 44px",
+        }}
+      />
 
-//       desc: "Completed backend development with Node.js, Express.js, and MongoDB. Built secure RESTful APIs, handled authentication with JWT, and designed scalable database schemas within 2-3 months.",
-//       icon: <Sparkles className="w-4 h-4" />,
-//     },
-//     {
-//       year: "2025",
-//       title: "Full-Stack Training at SMIT",
-//       desc: "Enrolled at Saylani Mass IT Training in April 2025 for Full-Stack MERN development. Mastered JavaScript, TypeScript, React.js, Next.js, and Tailwind CSS over 9-10 months, then completed backend in the final phase. Graduated May 2026.",
-//       icon: <GraduationCap className="w-4 h-4" />,
-//     },
-//     {
-//       year: "2025",
-//       title: "Began Coding Journey",
-//       desc: "Started self-learning web development from scratch — HTML5, CSS3, and JavaScript. Built a strong foundation independently before joining formal training, which accelerated the learning process.",
-//       icon: <Calendar className="w-4 h-4" />,
-//     },
-//   ];
+      {/* Ambient decorative glows */}
+      <div className="absolute top-1/3 left-[-8%] w-[500px] h-[500px] bg-primary/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 right-[-8%] w-[450px] h-[450px] bg-primary/5 blur-[130px] rounded-full pointer-events-none" />
 
-//   const techStack: TechItem[] = [
-//     { name: "React.js", icon: SiReact },
-//     { name: "Next.js", icon: SiNextdotjs },
-//     { name: "Tailwind", icon: SiTailwindcss },
-//     { name: "JavaScript", icon: SiJavascript },
-//     { name: "TypeScript", icon: SiTypescript },
-//     { name: "Firebase", icon: SiFirebase },
-//     { name: "Node.js", icon: SiNodedotjs },
-//     { name: "Express", icon: SiExpress },
-//     { name: "Mongodb", icon: SiMongodb },
-//   ];
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Section Header */}
+        <FadeIn delay={0}>
+          <div className="text-center mb-16 sm:mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/25 rounded-full mb-5 backdrop-blur-md shadow-[0_0_20px_rgba(189,255,105,0.1)]">
+              <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+              <span className="text-[10px] font-extrabold text-primary uppercase tracking-[2.5px]">
+                My Journey
+              </span>
+            </div>
 
-//   return (
-//     <section className="pt-24 relative overflow-hidden">
-//       {/* Background Grid - Thora aur subtle kiya hai */}
-//       <div
-//         className="absolute inset-0 opacity-[0.03] pointer-events-none"
-//         style={{
-//           backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-//           backgroundSize: "32px 32px",
-//         }}
-//       />
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-5">
+              Experience &{" "}
+              <span className="text-primary italic">Milestones</span>
+            </h2>
 
-//       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-//         {/* Section Header */}
-//         <div className="text-center mb-20">
-//           <FadeIn delay={100}>
-//             {/* Subtitle Badge */}
-//             <div className="inline-flex items-center gap-2 px-3 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
-//               <Sparkles className="w-3 h-3 text-primary" />
-//               <span className="text-[9px] font-bold text-primary uppercase tracking-[2px]">
-//                 Expertise & Roadmap
-//               </span>
-//             </div>
-//             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter">
-//               Technical <span className="text-primary italic">Arsenal</span> &{" "}
-//               <span className="relative">
-//                 Journey
-//                 <svg
-//                   className="absolute -bottom-2 left-0 w-full h-2 text-primary/30"
-//                   viewBox="0 0 100 10"
-//                   preserveAspectRatio="none"
-//                 >
-//                   <path
-//                     d="M0 5 Q 25 0 50 5 T 100 5"
-//                     fill="none"
-//                     stroke="currentColor"
-//                     strokeWidth="2"
-//                   />
-//                 </svg>
-//               </span>
-//             </h2>
-//           </FadeIn>
-//         </div>
+            <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+              My journey through full-stack development training, hands-on
+              projects, and professional internship experience.
+            </p>
+          </div>
+        </FadeIn>
 
-//         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-//           {/* LEFT: TECH STACK GRID */}
-//           <div className="lg:col-span-7">
-//             <FadeIn delay={200}>
-//               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-//                 {techStack.map((skill, index) => (
-//                   <div
-//                     key={index}
-//                     className="group relative bg-white/[0.02] border border-primary/20 hover:border-primary/40 rounded-[2rem] p-8 flex flex-col items-center justify-center gap-4 transition-all duration-500 backdrop-blur-sm hover:shadow-[0_0_30px_-10px_rgba(var(--primary-rgb),0.3)]"
-//                   >
-//                     {/* Hover Glow Effect */}
-//                     <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Vertical Glowing Line on desktop & mobile */}
+          <div className="absolute left-4 sm:left-8 top-3 bottom-8 w-[2px] bg-gradient-to-b from-primary via-primary/30 to-transparent z-0" />
 
-//                     <skill.icon className="text-4xl text-primary/90 transition-all duration-500 group-hover:text-primary group-hover:scale-110" />
-//                     <span className="text-[10px] font-bold uppercase tracking-[2px] text-white/60 group-hover:text-white transition-colors">
-//                       {skill.name}
-//                     </span>
-//                   </div>
-//                 ))}
-//               </div>
-//             </FadeIn>
-//           </div>
+          <div className="space-y-8 sm:space-y-10 relative z-10">
+            {milestones.map((item, index) => (
+              <FadeIn key={index} delay={index * 100}>
+                <div className="relative flex items-start gap-5 sm:gap-10 group">
+                  {/* Timeline Node Orb */}
+                  <div className="relative z-10 flex items-center justify-center shrink-0">
+                    <div
+                      className={`w-9 h-9 sm:w-11 sm:h-11 rounded-2xl flex items-center justify-center border transition-all duration-500 ${
+                        item.isCurrent
+                          ? "bg-primary text-black border-primary shadow-[0_0_25px_rgba(189,255,105,0.5)] scale-110"
+                          : "bg-[#0a0a0a] border-primary/30 text-primary group-hover:border-primary group-hover:bg-primary group-hover:text-black group-hover:scale-110 shadow-[0_0_15px_rgba(189,255,105,0.15)]"
+                      }`}
+                    >
+                      {item.icon}
+                    </div>
+                  </div>
 
-//           {/* RIGHT: TIMELINE WITH BETTER HIERARCHY */}
-//           <div className="lg:col-span-5">
-//             <FadeIn delay={400}>
-//               <div className="relative pl-8 space-y-5 ml-4">
-//                 {/* Custom Line - Fades out at bottom */}
-//                 <div className="absolute left-0 top-2 bottom-0 w-[1px] bg-gradient-to-b from-primary via-primary/20 to-transparent" />
+                  {/* Card Content */}
+                  <div className="flex-1 bg-white/[0.025] hover:bg-white/[0.045] border border-primary/20 hover:border-primary/50 rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 transition-all duration-500 backdrop-blur-xl shadow-lg hover:shadow-[0_12px_40px_-10px_rgba(189,255,105,0.18)] hover:-translate-y-1 overflow-hidden relative">
+                    {/* Top gradient highlight on hover */}
+                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-//                 {journeyData.map((item, index) => (
-//                   <div key={index} className="relative group">
-//                     {/* Timeline Dot */}
-//                     <div className="absolute -left-[45px] top-1 w-8 h-8 rounded-full border border-primary/30 bg-black flex items-center justify-center text-primary z-10 group-hover:scale-110 group-hover:border-primary transition-all duration-500 shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]">
-//                       {item.icon}
-//                     </div>
+                    {/* Top Row: Year pill + Status Badge */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                      <span className="px-3.5 py-1 rounded-lg bg-primary/10 border border-primary/25 text-primary font-mono text-xs font-bold tracking-wider">
+                        {item.period}
+                      </span>
 
-//                     <div className="bg-white/[0.02] border border-primary/20 p-6 rounded-[1.5rem] hover:bg-white/[0.04] hover:border-primary/30 transition-all duration-500">
-//                       <div className="flex items-center justify-between mb-3">
-//                         <span className="px-2 py-0.5 bg-white/5 rounded text-primary font-mono text-[10px] font-bold tracking-widest">
-//                           {item.year}
-//                         </span>
-//                         {item.status && (
-//                           <span className="flex items-center gap-1.5 text-[8px] font-black uppercase tracking-widest text-primary">
-//                             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
-//                             {item.status}
-//                           </span>
-//                         )}
-//                       </div>
-//                       <h4 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
-//                         {item.title}
-//                       </h4>
-//                       <p className="text-xs text-white/60 leading-relaxed font-normal">
-//                         {item.desc}
-//                       </p>
-//                     </div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </FadeIn>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+                      {item.status && (
+                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[10px] font-bold uppercase tracking-wider text-white/80">
+                          {item.isCurrent && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
+                          )}
+                          <span
+                            className={
+                              item.isCurrent ? "text-primary" : "text-white/70"
+                            }
+                          >
+                            {item.status}
+                          </span>
+                        </div>
+                      )}
+                    </div>
 
-// export default TechAndJourney;
+                    {/* Role & Organization */}
+                    <div className="mb-3">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-primary transition-colors tracking-tight">
+                        {item.role}
+                      </h3>
+                      <p className="text-sm font-semibold text-primary/80 tracking-wide mt-0.5">
+                        {item.organization}
+                      </p>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-sm sm:text-base text-white/70 font-light leading-relaxed mb-5">
+                      {item.desc}
+                    </p>
+
+                    {/* Key Highlights / Deliverables */}
+                    <div className="pt-4 border-t border-white/5 flex flex-wrap gap-2">
+                      {item.highlights.map((highlight, hIdx) => (
+                        <span
+                          key={hIdx}
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.03] border border-white/10 text-xs text-white/75 group-hover:border-primary/20 group-hover:text-white transition-all font-light"
+                        >
+                          <CheckCircle2 className="w-3 h-3 text-primary shrink-0" />
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default JourneySection;
