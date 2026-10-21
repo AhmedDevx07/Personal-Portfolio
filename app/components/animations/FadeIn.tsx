@@ -6,14 +6,22 @@ interface FadeInProps {
   children: React.ReactNode;
   delay?: number;
   duration?: number;
+  direction?: "up" | "down" | "left" | "right" | "none";
+  distance?: number;
   threshold?: number;
+  className?: string;
+  once?: boolean;
 }
 
 const FadeIn: React.FC<FadeInProps> = ({
   children,
   delay = 0,
-  duration = 350,
-  threshold = 0.01,
+  duration = 550,
+  direction = "up",
+  distance = 28,
+  threshold = 0.08,
+  className = "",
+  once = true,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -31,14 +39,18 @@ const FadeIn: React.FC<FadeInProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(element);
-          observer.disconnect();
+          if (once) {
+            observer.unobserve(element);
+            observer.disconnect();
+          }
+        } else if (!once) {
+          setIsVisible(false);
         }
       },
       {
         threshold,
-        // Pre-triggers 200px before element enters viewport for instant, lag-free appearance
-        rootMargin: "0px 0px 200px 0px",
+        // -30px triggers right as the element enters the screen so user actively sees the entrance
+        rootMargin: "0px 0px -30px 0px",
       },
     );
 
@@ -47,19 +59,39 @@ const FadeIn: React.FC<FadeInProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, [threshold]);
+  }, [threshold, once]);
 
-  // Cap delay so elements appear snappily without awkward waiting on scroll
-  const activeDelay = Math.min(delay, 150);
+  // Scaled delay: creates a fast, elegant cascade without keeping content hidden/delayed
+  const activeDelay = Math.min(Math.round(delay * 0.55), 180);
+
+  const getInitialTransform = () => {
+    switch (direction) {
+      case "up":
+        return `translate3d(0, ${distance}px, 0)`;
+      case "down":
+        return `translate3d(0, -${distance}px, 0)`;
+      case "left":
+        return `translate3d(${distance}px, 0, 0)`;
+      case "right":
+        return `translate3d(-${distance}px, 0, 0)`;
+      case "none":
+      default:
+        return "translate3d(0, 0, 0)";
+    }
+  };
 
   return (
     <div
       ref={elementRef}
-      className={isVisible ? "animate-fadeIn" : "opacity-0"}
+      className={className}
       style={{
-        animationDelay: isVisible ? `${activeDelay}ms` : "0ms",
-        animationDuration: `${duration}ms`,
-        animationFillMode: "both",
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translate3d(0, 0, 0)" : getInitialTransform(),
+        transitionProperty: "opacity, transform",
+        transitionDuration: `${duration}ms`,
+        // Award-winning cubic-bezier curve: fast responsive start, silky spring deceleration
+        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+        transitionDelay: `${activeDelay}ms`,
         willChange: isVisible ? "auto" : "opacity, transform",
       }}
     >
