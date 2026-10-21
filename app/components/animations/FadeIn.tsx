@@ -12,44 +12,55 @@ interface FadeInProps {
 const FadeIn: React.FC<FadeInProps> = ({
   children,
   delay = 0,
-  duration = 500,
-  threshold = 0.1,
+  duration = 350,
+  threshold = 0.01,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+        if (entry.isIntersecting) {
           setIsVisible(true);
+          observer.unobserve(element);
+          observer.disconnect();
         }
       },
       {
-        threshold: threshold,
-        rootMargin: "0px 0px -50px 0px",
+        threshold,
+        // Pre-triggers 200px before element enters viewport for instant, lag-free appearance
+        rootMargin: "0px 0px 200px 0px",
       },
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
+      observer.disconnect();
     };
-  }, [threshold, isVisible]);
+  }, [threshold]);
+
+  // Cap delay so elements appear snappily without awkward waiting on scroll
+  const activeDelay = Math.min(delay, 150);
 
   return (
     <div
       ref={elementRef}
       className={isVisible ? "animate-fadeIn" : "opacity-0"}
       style={{
-        animationDelay: isVisible ? `${delay}ms` : "0ms",
+        animationDelay: isVisible ? `${activeDelay}ms` : "0ms",
         animationDuration: `${duration}ms`,
         animationFillMode: "both",
+        willChange: isVisible ? "auto" : "opacity, transform",
       }}
     >
       {children}
