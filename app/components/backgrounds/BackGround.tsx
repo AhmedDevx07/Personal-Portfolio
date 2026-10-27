@@ -29,8 +29,8 @@ export const HeroBackground: React.FC = () => {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden bg-[#000000] pointer-events-none">
       {/* 1. Theme Glows with hardware-friendly blurs */}
-      <div className="absolute top-[-5%] right-[-5%] h-[260px] lg:h-[600px] w-[260px] lg:w-[600px] rounded-full bg-[#bdff69]/5 blur-[60px] lg:blur-[130px]" />
-      <div className="absolute bottom-[10%] left-[-5%] h-[220px] lg:h-[500px] w-[220px] lg:w-[500px] rounded-full bg-[#bdff69]/10 blur-[60px] lg:blur-[130px]" />
+      <div className="absolute top-[-5%] right-[-5%] h-[260px] lg:h-[600px] w-[260px] lg:w-[600px] rounded-full bg-[#bdff69]/5 blur-[60px] lg:blur-[130px] transform-gpu" />
+      <div className="absolute bottom-[10%] left-[-5%] h-[220px] lg:h-[500px] w-[220px] lg:w-[500px] rounded-full bg-[#bdff69]/10 blur-[60px] lg:blur-[130px] transform-gpu" />
 
       {/* 2. Responsive Grid */}
       <div
@@ -40,30 +40,32 @@ export const HeroBackground: React.FC = () => {
         opacity-60 lg:opacity-40"
       />
 
-      {/* 3. High-Performance GPU Particles */}
-      {particles.map((particle, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-[#bdff69]"
-          style={{
-            width: `${particle.randomSize}px`,
-            height: `${particle.randomSize}px`,
-            left: `${particle.randomLeft}%`,
-            top: `${particle.randomTop}%`,
-            transform: "translateZ(0)",
-          }}
-          animate={{
-            y: [0, -35, 0],
-            opacity: [0.15, 0.55, 0.15],
-            scale: [1, 1.25, 1],
-          }}
-          transition={{
-            duration: particle.randomDuration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+      {/* 3. High-Performance GPU Particles - Hidden on mobile to ensure 120fps touch scroll */}
+      <div className="hidden md:block">
+        {particles.map((particle, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-[#bdff69]"
+            style={{
+              width: `${particle.randomSize}px`,
+              height: `${particle.randomSize}px`,
+              left: `${particle.randomLeft}%`,
+              top: `${particle.randomTop}%`,
+              transform: "translateZ(0)",
+            }}
+            animate={{
+              y: [0, -35, 0],
+              opacity: [0.15, 0.55, 0.15],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: particle.randomDuration,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

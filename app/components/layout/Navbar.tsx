@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Code, Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/app/utils/constants";
 import { scrollToSection, useScrollSpy } from "@/app/hooks/useScrollSpy";
@@ -8,7 +8,7 @@ import { scrollToSection, useScrollSpy } from "@/app/hooks/useScrollSpy";
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [scrollProgress, setScrollProgress] = useState<number>(0);
+  const progressBarRef = useRef<HTMLDivElement>(null);
 
   const activeSection = useScrollSpy(NAV_LINKS.map((item) => item.id));
 
@@ -17,13 +17,19 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 40);
-          const totalHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-          if (totalHeight > 0) {
-            setScrollProgress(
-              Math.min(Math.max(window.scrollY / totalHeight, 0), 1)
-            );
+          const scrolled = window.scrollY > 40;
+          setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
+
+          if (progressBarRef.current) {
+            const totalHeight =
+              document.documentElement.scrollHeight - window.innerHeight;
+            if (totalHeight > 0) {
+              const progress = Math.min(
+                Math.max(window.scrollY / totalHeight, 0),
+                1
+              );
+              progressBarRef.current.style.transform = `scaleX(${progress})`;
+            }
           }
           ticking = false;
         });
@@ -50,9 +56,10 @@ const Navbar: React.FC = () => {
     >
       {/* Precision Scroll Progress Indicator */}
       <div
+        ref={progressBarRef}
         className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-primary/60 via-primary to-primary w-full origin-left pointer-events-none shadow-[0_0_10px_rgba(189,255,105,0.7)]"
         style={{
-          transform: `scaleX(${scrollProgress})`,
+          transform: "scaleX(0)",
           transition: "transform 0.05s linear",
         }}
       />

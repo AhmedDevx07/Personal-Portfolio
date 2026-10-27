@@ -134,3 +134,19 @@
   box-shadow: 0 0 45px -8px rgba(189, 255, 105, 0.35);
 }
 
+/* High-performance scroll animation styles (zero hydration mismatch) */
+.fade-in-item {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: var(--fade-duration, 500ms);
+  transition-delay: var(--fade-delay, 0ms);
+}
+
+@media (max-width: 767px) {
+  .fade-in-item {
+    transition-duration: 320ms !important;
+    transition-delay: 0ms !important;
+    --fade-dist: 10px !important;
+  }
+}
+
