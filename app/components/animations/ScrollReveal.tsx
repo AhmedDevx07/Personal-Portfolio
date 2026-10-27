@@ -3,7 +3,7 @@
 import React from "react";
 import FadeIn from "./FadeIn";
 
-interface ScrollRevealProps {
+export interface ScrollRevealProps {
   children: React.ReactNode;
   animation?: "fadeUp" | "fadeIn" | "slideLeft" | "slideRight" | "scaleIn";
   delay?: number;
@@ -11,11 +11,11 @@ interface ScrollRevealProps {
   className?: string;
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({
+export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   children,
   animation = "fadeUp",
   delay = 0,
-  duration = 550,
+  duration = 500,
   className = "",
 }) => {
   const directionMap: Record<string, "up" | "down" | "left" | "right" | "none"> = {

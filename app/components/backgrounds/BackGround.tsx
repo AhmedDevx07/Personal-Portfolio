@@ -9,12 +9,17 @@ export const HeroBackground: React.FC = () => {
 
   useEffect(() => {
     setMounted(true);
+    const isMobile = window.innerWidth < 768;
+    // On mobile screens, reduce particle count to 14 for 60/120fps scrolling.
+    // On desktop, 32 particles give an elegant, high-end ambient feel without lag.
+    const particleCount = isMobile ? 14 : 32;
+
     setParticles(
-      [...Array(60)].map(() => ({
+      [...Array(particleCount)].map(() => ({
         randomLeft: Math.random() * 100,
         randomTop: Math.random() * 100,
-        randomSize: Math.random() * 5 + 1,
-        randomDuration: Math.random() * 10 + 5,
+        randomSize: Math.random() * 4 + 1.5,
+        randomDuration: Math.random() * 8 + 6,
       }))
     );
   }, []);
@@ -22,10 +27,10 @@ export const HeroBackground: React.FC = () => {
   if (!mounted) return <div className="absolute inset-0 -z-10 bg-black" />;
 
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden bg-[#000000]">
-      {/* 1. Theme Glows */}
-      <div className="absolute top-[-5%] right-[-5%] h-[300px] lg:h-[600px] w-[300px] lg:w-[600px] rounded-full bg-[#bdff69]/5 blur-[80px] lg:blur-[130px]" />
-      <div className="absolute bottom-[10%] left-[-5%] h-[250px] lg:h-[500px] w-[250px] lg:w-[500px] rounded-full bg-[#bdff69]/10 blur-[80px] lg:blur-[130px]" />
+    <div className="absolute inset-0 -z-10 overflow-hidden bg-[#000000] pointer-events-none">
+      {/* 1. Theme Glows with hardware-friendly blurs */}
+      <div className="absolute top-[-5%] right-[-5%] h-[260px] lg:h-[600px] w-[260px] lg:w-[600px] rounded-full bg-[#bdff69]/5 blur-[60px] lg:blur-[130px]" />
+      <div className="absolute bottom-[10%] left-[-5%] h-[220px] lg:h-[500px] w-[220px] lg:w-[500px] rounded-full bg-[#bdff69]/10 blur-[60px] lg:blur-[130px]" />
 
       {/* 2. Responsive Grid */}
       <div
@@ -35,31 +40,30 @@ export const HeroBackground: React.FC = () => {
         opacity-60 lg:opacity-40"
       />
 
-      {/* 3. Particles with Client-Side Randomization */}
-      {particles.map((particle, i) => {
-        return (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-[#bdff69]"
-            style={{
-              width: `${particle.randomSize}px`,
-              height: `${particle.randomSize}px`,
-              left: `${particle.randomLeft}%`,
-              top: `${particle.randomTop}%`,
-            }}
-            animate={{
-              y: [0, -40, 0],
-              opacity: [0.1, 0.6, 0.1],
-              scale: [1, 1.3, 1],
-            }}
-            transition={{
-              duration: particle.randomDuration,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        );
-      })}
+      {/* 3. High-Performance GPU Particles */}
+      {particles.map((particle, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full bg-[#bdff69]"
+          style={{
+            width: `${particle.randomSize}px`,
+            height: `${particle.randomSize}px`,
+            left: `${particle.randomLeft}%`,
+            top: `${particle.randomTop}%`,
+            transform: "translateZ(0)",
+          }}
+          animate={{
+            y: [0, -35, 0],
+            opacity: [0.15, 0.55, 0.15],
+            scale: [1, 1.25, 1],
+          }}
+          transition={{
+            duration: particle.randomDuration,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
     </div>
   );
 };

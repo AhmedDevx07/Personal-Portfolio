@@ -53,9 +53,7 @@ const Hero: React.FC = () => {
 
             <FadeIn delay={200}>
               <p className="text-base md:text-lg text-white/60 max-w-[500px] mx-auto lg:mx-0 mb-6 leading-relaxed">
-                I build full-stack web applications using React, Next.js,
-                Node.js, and MongoDB. I focus on responsive user interfaces,
-                REST APIs, secure authentication, and AI-powered features.
+                I build responsive, full-stack web applications using React, Next.js, Node.js, and MongoDB. I develop REST APIs, secure authentication systems, and AI-powered features, with hands-on experience in AWS deployment, Docker, and CI/CD.
               </p>
             </FadeIn>
 
