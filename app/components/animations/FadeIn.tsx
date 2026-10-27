@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 interface FadeInProps {
   children: React.ReactNode;
@@ -8,120 +9,70 @@ interface FadeInProps {
   duration?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
   distance?: number;
-  threshold?: number;
   className?: string;
   once?: boolean;
 }
 
-// Global Shared IntersectionObserver for peak mobile and desktop performance.
-// Reusing a single observer instance eliminates CPU/memory overhead from dozens of components.
-type ObserverCallback = () => void;
-let sharedObserver: IntersectionObserver | null = null;
-const observerCallbacks = new WeakMap<Element, ObserverCallback>();
-
-function getSharedObserver(): IntersectionObserver | null {
-  if (typeof window === "undefined" || typeof IntersectionObserver === "undefined") {
-    return null;
-  }
-  if (!sharedObserver) {
-    sharedObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cb = observerCallbacks.get(entry.target);
-            if (cb) cb();
-          }
-        });
-      },
-      {
-        // Positive bottom rootMargin (+80px) triggers BEFORE element enters view on scroll.
-        // This completely eliminates blank-space pop-in or stutter on mobile and desktop!
-        rootMargin: "0px 0px 80px 0px",
-        threshold: 0.01,
-      }
-    );
-  }
-  return sharedObserver;
-}
-
-const FadeIn: React.FC<FadeInProps> = ({
+export const FadeIn: React.FC<FadeInProps> = ({
   children,
   delay = 0,
-  duration = 500,
+  duration = 0.5,
   direction = "up",
-  distance = 28,
+  distance = 24,
   className = "",
   once = true,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
+  const shouldReduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    // Respect users who prefer reduced motion
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      setIsVisible(true);
-      return;
-    }
+  // Normalize delay & duration (handles both ms like 200 and seconds like 0.2)
+  const delaySec = delay >= 10 ? delay / 1000 : delay;
+  const durationSec = duration >= 10 ? duration / 1000 : duration;
 
-    const element = elementRef.current;
-    if (!element) return;
-
-    const observer = getSharedObserver();
-    if (!observer) {
-      setIsVisible(true);
-      return;
-    }
-
-    const onIntersect = () => {
-      setIsVisible(true);
-      if (once) {
-        observer.unobserve(element);
-        observerCallbacks.delete(element);
-      }
-    };
-
-    observerCallbacks.set(element, onIntersect);
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-      observerCallbacks.delete(element);
-    };
-  }, [once]);
-
-  const getInitialTransform = () => {
+  const getDirectionOffset = () => {
     switch (direction) {
       case "up":
-        return "translate3d(0, var(--fade-dist, 28px), 0)";
+        return { y: distance };
       case "down":
-        return "translate3d(0, calc(-1 * var(--fade-dist, 28px)), 0)";
+        return { y: -distance };
       case "left":
-        return "translate3d(var(--fade-dist, 28px), 0, 0)";
+        return { x: distance };
       case "right":
-        return "translate3d(calc(-1 * var(--fade-dist, 28px)), 0, 0)";
+        return { x: -distance };
       case "none":
       default:
-        return "translate3d(0, 0, 0)";
+        return {};
     }
   };
 
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
-    <div
-      ref={elementRef}
-      className={`fade-in-item ${className}`.trim()}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translate3d(0, 0, 0)" : getInitialTransform(),
-        ["--fade-dist" as any]: `${distance}px`,
-        ["--fade-duration" as any]: `${duration}ms`,
-        ["--fade-delay" as any]: `${Math.min(delay, 220)}ms`,
+    <motion.div
+      initial={{
+        opacity: 0,
+        ...getDirectionOffset(),
       }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        y: 0,
+      }}
+      viewport={{
+        once,
+        margin: "0px 0px 80px 0px",
+        amount: 0.05,
+      }}
+      transition={{
+        duration: durationSec,
+        delay: delaySec,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
