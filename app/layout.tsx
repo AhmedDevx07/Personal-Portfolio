@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import { HeroBackground } from "@/app/components/backgrounds/BackGround";
+import ScrollToTop from "@/app/components/Ui/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Muhammad Ahmed | Full Stack MERN & Next.js Developer",
@@ -51,6 +52,7 @@ export default function RootLayout({
           <Navbar />
           <main className="relative z-10">{children}</main>
           <Footer />
+          <ScrollToTop />
         </div>
       </body>
     </html>

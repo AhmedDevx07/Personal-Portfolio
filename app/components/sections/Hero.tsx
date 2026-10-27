@@ -13,12 +13,9 @@ import {
 import { PERSONAL_INFO, STATS } from "@/app/utils/constants";
 import FadeIn from "../animations/FadeIn";
 import ahmedimg from "@/public/ahmed.jpg";
+import { scrollToSection } from "@/app/hooks/useScrollSpy";
 
 const Hero: React.FC = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-2">

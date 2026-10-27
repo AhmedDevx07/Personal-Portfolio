@@ -197,14 +197,19 @@ const Skills: React.FC = () => {
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-5"
         >
           <AnimatePresence mode="popLayout">
-            {filteredSkills.map((item) => (
+            {filteredSkills.map((item, index) => (
               <motion.div
                 layout
                 key={item.name}
-                initial={{ opacity: 0, scale: 0.9, y: 15 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: 15 }}
-                transition={{ duration: 0.28, ease: "easeOut" }}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{
+                  duration: 0.35,
+                  delay: (index % 6) * 0.04,
+                  ease: "easeOut",
+                }}
                 className="h-full"
               >
                 <div className="group relative h-full bg-white/[0.025] hover:bg-white/[0.045] border border-primary/20 hover:border-primary/50 rounded-2xl sm:rounded-[1.75rem] p-5 sm:p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_35px_-10px_rgba(189,255,105,0.2)] backdrop-blur-xl overflow-hidden flex flex-col items-center justify-between text-center cursor-default">

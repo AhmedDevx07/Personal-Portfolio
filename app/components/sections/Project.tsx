@@ -92,14 +92,19 @@ const Projects: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 layout
                 key={project.id}
-                initial={{ opacity: 0, scale: 0.92, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.92, y: 20 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
+                initial={{ opacity: 0, scale: 0.94, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                exit={{ opacity: 0, scale: 0.94, y: 30 }}
+                transition={{
+                  duration: 0.45,
+                  delay: (index % 3) * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="h-full"
               >
                 <ProjectCard project={project} />

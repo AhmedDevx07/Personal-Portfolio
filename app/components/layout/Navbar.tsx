@@ -8,14 +8,29 @@ import { scrollToSection, useScrollSpy } from "@/app/hooks/useScrollSpy";
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   const activeSection = useScrollSpy(NAV_LINKS.map((item) => item.id));
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 40);
+          const totalHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+          if (totalHeight > 0) {
+            setScrollProgress(
+              Math.min(Math.max(window.scrollY / totalHeight, 0), 1)
+            );
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,6 +48,14 @@ const Navbar: React.FC = () => {
       }`}
       style={{ transform: "translate3d(0,0,0)" }}
     >
+      {/* Precision Scroll Progress Indicator */}
+      <div
+        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-primary/60 via-primary to-primary w-full origin-left pointer-events-none shadow-[0_0_10px_rgba(189,255,105,0.7)]"
+        style={{
+          transform: `scaleX(${scrollProgress})`,
+          transition: "transform 0.05s linear",
+        }}
+      />
       <div className="max-w-[1320px] mx-auto px-5">
         <div className="flex items-center justify-between">
           {/* logo */}

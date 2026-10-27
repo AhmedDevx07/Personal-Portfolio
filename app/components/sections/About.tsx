@@ -109,13 +109,13 @@ const About: React.FC = () => {
           </div>
 
           {/* RIGHT: Bento Cards */}
-          <FadeIn delay={300}>
-            <div className="grid grid-cols-2 gap-4 sm:gap-5 relative">
-              {/* Central Glow Accent */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/10 blur-[110px] rounded-full pointer-events-none" />
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 relative">
+            {/* Central Glow Accent */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/10 blur-[110px] rounded-full pointer-events-none" />
 
-              {/* Card 1: Tech Ecosystem (Large) */}
-              <div className="col-span-2 group">
+            {/* Card 1: Tech Ecosystem (Large) */}
+            <FadeIn delay={100} className="col-span-2">
+              <div className="group">
                 <div className="relative bg-white/[0.025] hover:bg-white/[0.04] border border-primary/20 hover:border-primary/50 rounded-[2.2rem] p-7 sm:p-8 transition-all duration-500 backdrop-blur-xl overflow-hidden shadow-lg hover:shadow-[0_10px_35px_-10px_rgba(189,255,105,0.15)] hover:-translate-y-1">
                   {/* Subtle Top Gradient Highlight */}
                   <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -162,9 +162,11 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </FadeIn>
 
-              {/* Card 2: Aesthetic (Small) */}
-              <div className="col-span-2 sm:col-span-1 group">
+            {/* Card 2: Aesthetic (Small) */}
+            <FadeIn delay={200} className="col-span-2 sm:col-span-1 h-full">
+              <div className="group h-full">
                 <div className="h-full relative bg-white/[0.025] hover:bg-white/[0.04] border border-primary/20 hover:border-primary/50 rounded-[2.2rem] p-7 transition-all duration-500 backdrop-blur-xl flex flex-col justify-between overflow-hidden hover:shadow-[0_10px_35px_-10px_rgba(189,255,105,0.15)] hover:-translate-y-1">
                   <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                   <div>
@@ -185,9 +187,11 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </FadeIn>
 
-              {/* Card 3: Performance (Small) */}
-              <div className="col-span-2 sm:col-span-1 group">
+            {/* Card 3: Performance (Small) */}
+            <FadeIn delay={260} className="col-span-2 sm:col-span-1 h-full">
+              <div className="group h-full">
                 <div className="h-full relative bg-white/[0.025] hover:bg-white/[0.04] border border-primary/20 hover:border-primary/50 rounded-[2.2rem] p-7 transition-all duration-500 backdrop-blur-xl flex flex-col justify-between overflow-hidden hover:shadow-[0_10px_35px_-10px_rgba(189,255,105,0.15)] hover:-translate-y-1">
                   <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                   <div>
@@ -208,43 +212,43 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </FadeIn>
 
-              {/* Card 4: Stats Bar */}
-              <div className="col-span-2">
-                <div className="relative bg-white/[0.025] hover:bg-white/[0.04] border border-primary/25 rounded-[2.2rem] p-6 backdrop-blur-xl overflow-hidden transition-all duration-500 shadow-lg">
-                  <div className="absolute inset-0 bg-primary/[0.02] pointer-events-none" />
-                  <div className="grid grid-cols-3 gap-3 relative z-10">
-                    <div className="text-center group/stat">
-                      <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
-                        30+
-                      </p>
-                      <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
-                        Projects Built
-                      </p>
-                    </div>
+            {/* Card 4: Stats Bar */}
+            <FadeIn delay={320} className="col-span-2">
+              <div className="relative bg-white/[0.025] hover:bg-white/[0.04] border border-primary/25 rounded-[2.2rem] p-6 backdrop-blur-xl overflow-hidden transition-all duration-500 shadow-lg">
+                <div className="absolute inset-0 bg-primary/[0.02] pointer-events-none" />
+                <div className="grid grid-cols-3 gap-3 relative z-10">
+                  <div className="text-center group/stat">
+                    <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
+                      30+
+                    </p>
+                    <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
+                      Projects Built
+                    </p>
+                  </div>
 
-                    <div className="text-center border-x border-primary/20 group/stat">
-                      <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
-                        MERN
-                      </p>
-                      <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
-                        Core Stack
-                      </p>
-                    </div>
+                  <div className="text-center border-x border-primary/20 group/stat">
+                    <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
+                      MERN
+                    </p>
+                    <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
+                      Core Stack
+                    </p>
+                  </div>
 
-                    <div className="text-center group/stat">
-                      <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
-                        Clean
-                      </p>
-                      <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
-                        Code Practices
-                      </p>
-                    </div>
+                  <div className="text-center group/stat">
+                    <p className="text-2xl sm:text-3xl font-black text-primary italic leading-none group-hover/stat:scale-105 transition-transform duration-300">
+                      Clean
+                    </p>
+                    <p className="text-[9px] sm:text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2">
+                      Code Practices
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>
