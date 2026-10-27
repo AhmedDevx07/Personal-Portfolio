@@ -152,14 +152,6 @@ const Footer: React.FC = () => {
                     in Karachi
                   </span>
                 </div>
-
-                <button
-                  onClick={scrollToTop}
-                  title="Back to top"
-                  className="w-9 h-9 rounded-full bg-white/[0.04] border border-white/10 hover:border-primary hover:bg-primary hover:text-black text-primary flex items-center justify-center transition-all duration-300 cursor-pointer group active:scale-90"
-                >
-                  <ArrowUp className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
-                </button>
               </div>
             </div>
           </div>
